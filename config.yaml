@@ -1,7 +1,7 @@
-baseURL: https://hugo-toha.github.io
+baseURL: https://davidgs.com/hugo
 
 languageCode: en-us
-title: "John's Blog"
+title: "David G. Simmons"
 theme: "toha"
 
 # Manage languages
@@ -10,9 +10,6 @@ languages:
   en:
     languageName: English
     weight: 1
-  bn:
-    languageName: বাংলা
-    weight: 3
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 # DefaultContentLanguage: bn
@@ -28,7 +25,7 @@ markup:
     ordered: false
 
 # Enable Google Analytics
-googleAnalytics: UA-122321624-2
+# googleAnalytics: UA-122321624-2
 
 # Enable global emoji support
 enableEmoji: true
@@ -47,11 +44,12 @@ params:
     favicon: /images/site/favicon.png
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/davidgs/website
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
-
+  permalinks:
+    posts: /:year/:month/:title/
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true
 

@@ -14,51 +14,52 @@ buttons:
   filter: "all"
 - name: Professional
   filter: "professional"
-- name: Academic
-  filter: "academic"
+# - name: Academic
+#   filter: "academic"
 - name: Hobby
   filter: "hobby"
 
 # your projects
 projects:
-- name: Kubernetes
-  logo: /images/sections/projects/kubernetes.png
-  role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+- name: DevRelCollective
+  logo: /images/sections/projects/DevRel.png
+  role: Moderator
+  timeline: "March 2019 - Present"
+  repo: https://github.com/devrelcollective/awesome-devrel # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Production-Grade Container Scheduling and Management.
-  tags: ["professional", "kubernetes", "cloud"]
+  summary: The DevRel Collective. An industry professional group of about 2,000 DevRel professionals.
+  tags: ["professional", "devrel"]
 
-- name: Tensorflow
-  logo: /images/sections/projects/tensorflow.png
+- name: Camunda Halloween
+  logo: /images/sections/projects/DoorbellCam.png
   role: Developer
-  timeline: "Jun 2018 - Present"
-  repo: https://github.com/tensorflow/tensorflow
+  timeline: "October, 2020"
+  repo: https://github.com/davidgs/CamundaHalloween
   #url: ""
-  summary: An Open Source Machine Learning Framework for Everyone.
-  tags: ["professional", "machine-learning","academic"]
+  summary: A fun IoT-based Halloween (or dog) treat dispenser using IoT cameras, BPMN, and MQTT.
+  tags: ["professional", "IoT"]
 
-- name: A sample academic paper
-  role: Team Lead
-  timeline: "Jan 2017 - Nov 2017"
-  url: "https://www.example.com"
-  summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius reprehenderit animi suscipit autem eligendi esse amet aliquid error eum. Accusantium distinctio soluta aliquid quas placeat modi suscipit eligendi nisi.
-  tags: ["academic","iot"]
+- name: Swift Library for InfluxDB
+  logo: /images/sections/projects/swift.png
+  role: Owner
+  timeline: "Jul 2019 - Present"
+  repo: "https://github.com/davidgs/InfluxData-Swift"
+  summary: A Swift library for writing Data to InfluxDB. Now picked up as an official library for InfluxDB.
+  tags: ["professional","iot"]
 
-- name: Nocode
-  logo: /images/sections/projects/no-code.png
+- name: IoT Poop Detector
+  logo: /images/sections/projects/poop.jpg
   role: Nothing
   timeline: "Oct 2019 - Dec 2019"
-  repo: https://github.com/kelseyhightower/nocode
+  url: posts/category/iot/this-whole-thing-stinks/
   #url: ""
-  summary: The best way to write secure and reliable applications. Write nothing; deploy nowhere.
-  tags: ["hobby", "fun"]
+  summary: I said I do dumb IoT Projects, and this is one of the dumbest. A bathroom stench-detector that alerts with a light-up poop-emoji
+  tags: ["hobby", "iot", "fun"]
 
-- name: Toha
-  logo: /images/sections/projects/toha.png
+- name: BME 280 Go Driver
+  logo: /images/sections/skills/go.png
   role: Owner
   timeline: "Jun 2019 - Present"
-  repo: https://github.com/hossainemruz/toha
-  summary: A Hugo theme for personal portfolio.
-  tags: ["hobby","hugo","theme","professional"]
+  repo: https://github.com/davidgs/bme280_go
+  summary: A driver for the Bosch BME 280 Temperature, humidity and pressure sensor written entirely in Go.
+  tags: ["hobby","IoT", "professional"]

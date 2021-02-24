@@ -11,39 +11,46 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
-  logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  url: "https://kubernetes.io/"
-
 - name: Go Development
   logo: /images/sections/skills/go.png
   summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
   url: "https://golang.org/"
 
-- name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+- name: Java
+  logo: /images/sections/skills/java.png
+  summary: "Capable of writing production-quality, maintanable code. "
+  url: "https://java.com/"
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-  url: "https://www.docker.com/"
+- name: Javascript/Node.js
+  logo: /images/sections/skills/js.png
+  summary: "Have written both client-side and server-side JavaScript (Node.js)"
+  url: "https://javascript.com/"
 
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  url: "https://prometheus.io/"
+- name: PHP
+  logo: /images/sections/skills/php.png
+  summary: "Database connectivity, interactive forms, etc."
+  url: "https://php.net/"
 
-- name: Linux
-  logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
 
-- name: Git
-  logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  url: "https://git-scm.com/"
+- name: Switf/Objective C
+  logo: /images/sections/skills/swift.png
+  summary: "iOS and macOS Swift/Objective C programming including library development"
+  url: "https://en.wikipedia.org/wiki/Swift_(programming_language)"
+
+- name: Python
+  logo: /images/sections/skills/python.png
+  summary: "Mostly MicroPython but have written other, larger programs as well."
+  url: "https://python.org/"
+
+- name: Time Series Databases
+  logo: /images/sections/skills/TS.png
+  summary: "Possibly the only IoT and Time Sereis Database DevRel on the planet. Possibly. Experienced in architecting IoT Data solutions using InfluxBD and QuestDB."
+
+- name: IoT
+  logo: /images/sections/skills/IoT.png
+  summary: "Been doing IoT device and systems development since 2004. Helped develop the very first IoT Developer Kit, the SunSPOT"
+  url: "https://github.com/davidgs"
 
 - name: C++
   logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+  summary: "Know C/C++ programming for embedded environments including EmbedOS, Arduino, etc. Have developed Arduino libraries."
