@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gadgets, IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/gadgets-iot/</link>
+    <description>Recent content in gadgets, IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/gadgets-iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is, and isn&#39;t, IoT</title>
+      <link>https://davidgs.com/posts/category/iot/what-is-and-isnt-iot/</link>
+      <pubDate>Tue, 02 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/what-is-and-isnt-iot/</guid>
+      <description>So what, exactly, is the Internet of Things (IoT)? And what isn’t it? That depends on whom you ask, and what you mean. There are tons and tons of ‘connected’ gadgets that people call IoT devices.But are they really IoT devices? The Internet of Things is, loosely, the world of connected, internet-enabled devices. But let’s turn to Wikipedia, just for fun:
+ The Internet of Things (IoT) is the interconnection of uniquely identifiable embedded computing devices Internet infrastructure.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Databases on David G. Simmons</title>
+    <link>https://davidgs.com/posts/category/database/</link>
+    <description>Recent content in Databases on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://davidgs.com/posts/category/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens When you Put Your SQL Database on the Internet</title>
+      <link>https://davidgs.com/posts/category/database/what-happens-when-you-put-your-sql-database-on-the-internet/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/what-happens-when-you-put-your-sql-database-on-the-internet/</guid>
+      <description>And then we posted it to Hacker News.
+If you listen to, well, pretty much anyone rational, they will tell you in no uncertain terms that the last thing you ever want to do is put your SQL Database on the internet. And even if you&amp;rsquo;re crazy enough to do that, you certainly would never go post the address to it on a place like Hacker News. Not unless you were a masochist anyway.</description>
+    </item>
+    
+    <item>
+      <title>Using Python to Access QuestDB</title>
+      <link>https://davidgs.com/posts/category/database/using-python-to-access-questdb/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/using-python-to-access-questdb/</guid>
+      <description>Using Python to Access QuestDB I&amp;rsquo;m going to keep this post really short, because almost all the real content is going to be in the tutorial itself. And this isn&amp;rsquo;t it! What Is This What I&amp;rsquo;ve built is.n interactive tutorial to get you started with QuestDB using Python. It&amp;rsquo;s very straightforward, and as long as you have Python 3.x installed, you should be almost ready to go. I say &amp;ldquo;almost&amp;rdquo; because you will need to install QuestDB locally in order to complete the tutorial.</description>
+    </item>
+    
+    <item>
+      <title>A QuestDB Dashboard with Node-Red</title>
+      <link>https://davidgs.com/posts/category/database/a-questdb-dashboard-with-node-red/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/a-questdb-dashboard-with-node-red/</guid>
+      <description>This is really a follow-on to my post from last week where I connected an Arduino with a temperature and humidity sensor to QuestDB.
+It&amp;rsquo;s one thing to send data to your database, but being able to visualize that data is the next logical step. So let&amp;rsquo;s dive right in to doing that.
+QuestDB is rather new, and hence we haven&amp;rsquo;t completed our Grafana Data Source Plugin yet, so I wanted to make a quick dashboard to show the incoming temperature/humidity data (and you&amp;rsquo;ll see just how awful the sensor really is).</description>
+    </item>
+    
+    <item>
+      <title>IoT on QuestDB</title>
+      <link>https://davidgs.com/posts/category/database/iot-on-questdb/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/iot-on-questdb/</guid>
+      <description>As you can well imagine, I&amp;rsquo;ve been super busy in my hew job at QuestDB so this has taken me longer than I would have liked, but here we are. If you know me at all, you know that one of the first things I always do with new things is, well, connect things to them! So I immediately went to connect an IoT device to QuestDB to see how it went.</description>
+    </item>
+    
+    <item>
+      <title>This stuff is FAST!</title>
+      <link>https://davidgs.com/posts/category/database/this-stuff-is-fast/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/this-stuff-is-fast/</guid>
+      <description>I&amp;rsquo;ve done a lot of projects using InfluxDB over the past few years (well, I did work there after all) so maybe I developed a bit of a bias, or a blind-spot. If you follow me on twitter, then you may have seen me post some quick videos of a project I was working on for visualizing COVID-19 data on a map.
+It worked, but it was pretty slow. So much so that I had to put a &amp;lsquo;loading&amp;rsquo; overlay on it so you knew it was still actually doing something while it was querying the data from the database.</description>
+    </item>
+    
+    <item>
+      <title>All That Corona Virus Data</title>
+      <link>https://davidgs.com/posts/category/database/all-that-corona-virus-data/</link>
+      <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/all-that-corona-virus-data/</guid>
+      <description>Many people have seen the nifty dashboard that John&amp;rsquo;s Hopkins University put out where you can see the number of COVID-19 cases, etc. throughout the world. It&amp;rsquo;s really nice and all, but what if you wanted to slice and dice the data yourself? Well, as it turns out, they are also publishing all the underlying data in a GitHub repository! It&amp;rsquo;s all published as daily CSV (comma separated values) files. Makes it super easy to import into Excel spreadsheets, but spreadsheets are so over.</description>
+    </item>
+    
+    <item>
+      <title>Snack Tracking with the new InfluxDB Arduino Library</title>
+      <link>https://davidgs.com/posts/category/database/snack-tracking-with-the-new-influxdb-arduino-library/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/snack-tracking-with-the-new-influxdb-arduino-library/</guid>
+      <description>A New Library Many of you Arduino enthusiasts are probably aware of the existing InfluxDB library that was maintained by Tobias Schürg for many years. Hats are off to him for providing this library and maintaining it for so long.
+With the arrival of InfluxDB 2.0, it was time to update the library. Some of you may remember that I did a quick update to support the InfluxDB 2.0 OSS a few months ago, and that was working well, but InfluxData has been working towards a set of consistent, InfluxData-maintained set of client libraries.</description>
+    </item>
+    
+    <item>
+      <title>Building the World&#39;s Smallest InfluxDB Server</title>
+      <link>https://davidgs.com/posts/category/database/building-the-worlds-smallest-influxdb-server/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/building-the-worlds-smallest-influxdb-server/</guid>
+      <description>I&amp;rsquo;ve built a lot of InfluxDB servers in my time here, and I&amp;rsquo;ve built some pretty esoteric ones at that, but I think I&amp;rsquo;ve finally pulled off what can only be described as the World&amp;rsquo;s Smallest InfluxDB Server! Back in the summer of 2019, I saw a project on CrowdSupply.com for something called the &amp;lsquo;Giant Board&amp;rsquo;. It looked really, really cool! A complete Single Board Computer (SBC) that ran Linux, all in a Feather form factor.</description>
+    </item>
+    
+    <item>
+      <title>IoT Data from Other Sources MySQL</title>
+      <link>https://davidgs.com/posts/category/database/iot-data-from-other-sources-mysql/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/iot-data-from-other-sources-mysql/</guid>
+      <description>If you’ve deployed an IoT solution, you’ve had to decide where, and how, to store all your data. At least from my perspective, the best and easiest place to store the sensor data is, of course, InfluxDB. My saying that can’t come as a surprise to you. But what about the other data you need to store? The data about the sensors? Things like the sensor manufacturer, the date it was placed into service, the customer ID, what kind of platform it’s running on.</description>
+    </item>
+    
+    <item>
+      <title>How to Output Data from Flux to MQTT Natively</title>
+      <link>https://davidgs.com/posts/category/database/how-to-output-data-from-flux-to-mqtt-natively/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/how-to-output-data-from-flux-to-mqtt-natively/</guid>
+      <description>Writing data from InfluxDB to MQTT using Flux I started using the Open Source (OSS) version of InfluxDB v2.0 very early on in the Alpha releases. Even in the early releases, I was very enamored with the way things were shaping up. But as you know, I do a lot of IoT builds, and use InfluxDB for all of it, so there were a few things I needed it to do that it just didn&amp;rsquo;t, yet.</description>
+    </item>
+    
+    <item>
+      <title>Publishing Data to InfluxDB from Swift</title>
+      <link>https://davidgs.com/posts/category/database/publishing-data-to-influxdb-from-swift/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/publishing-data-to-influxdb-from-swift/</guid>
+      <description>I’ve been a very busy man. It was only a few days ago that I wrote about a new InfluxDB library for writing data from Arduino devices to InfluxDB v2 and here I am again, writing about a new library for writing data to InfluxDB. This time, it’s in Swift. Now your native Apple apps can write data directly to InfluxDB v2.0 with ease.
+It’s a really simple library to use, and you can download the entire Xcode project for it from my GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Using Cross-Measurement math in InfluxDB Flux</title>
+      <link>https://davidgs.com/posts/category/database/using-cross-measurement-math-in-influxdb-flux/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/using-cross-measurement-math-in-influxdb-flux/</guid>
+      <description>I’ve been spending a lot of time lately with the 2.0 Alpha releases and I’m here to tell you: some of the new things coming are really, really cool! Especially for IoT. The one I’ve been using lately has been the ability to do math across measurements, which is really a game-changer for IoT data in InfluxDB.
+Let’s look at why here for a minute. As you probably know, I’ve been building out a bunch of IoT sensors that stream data to various instances of InfluxDB.</description>
+    </item>
+    
+    <item>
+      <title>Writing to InfluxDB 2.0 from Arduino ESP8266</title>
+      <link>https://davidgs.com/posts/category/database/writing-to-influxdb-2-0-from-arduino-esp8266/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/writing-to-influxdb-2-0-from-arduino-esp8266/</guid>
+      <description>As InfluxData moves ever closer to releasing v2.0, it’s becoming increasingly important to be able to get data into InfluxDBv2, of course. Makes sense, right? Since the vast majority (like, indistinguishable from 100%) of my data comes from IoT devices, I decided it was time to start making those devices InfluxDB v2-capable.
+I’m happy to say that the first step in that direction is now complete! One of my favorite sensors is a particulate matter sensor that measures the amount of very small particulate in the air (from 2.</description>
+    </item>
+    
+    <item>
+      <title>Time to Awesome with InfluxDB</title>
+      <link>https://davidgs.com/posts/category/database/timetoawesomeinfluxdb/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/timetoawesomeinfluxdb/</guid>
+      <description>InfluxData has a thing about Time to Awesome™. So much so that they Trademarked it. No, seriously, they did. And they mean it. So let&amp;rsquo;s go from Zero to Awesome!
+ We are singularly focused on reducing the Time to Awesome™, we truly care about helping developers and businesses get to results faster with less complexity and less code.
+ That’s directly from the About section of their website and they really do mean it!</description>
+    </item>
+    
+    <item>
+      <title>Time Series Data</title>
+      <link>https://davidgs.com/posts/category/database/time-series-data/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/time-series-data/</guid>
+      <description>I’m just going to drop this here. Don’t need to say much about it, as it’s pretty thorough. Go read it!</description>
+    </item>
+    
+  </channel>
+</rss>

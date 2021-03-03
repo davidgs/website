@@ -1,7 +1,8 @@
 ---
 title: "Introduction"
 date: 2017-03-01T08:06:25+06:00
-description: Introduction to Sample Post
+description: Introduction and more information
+hero: beans.jpg
 menu:
   sidebar:
     name: Introduction

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARTIK, Eclipse, Kura, Samsung on David G. Simmons</title>
+    <link>https://davidgs.com/tags/artik-eclipse-kura-samsung/</link>
+    <description>Recent content in ARTIK, Eclipse, Kura, Samsung on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/artik-eclipse-kura-samsung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making an ARTIK-520 IoT Gateway with Kura</title>
+      <link>https://davidgs.com/posts/category/general/making-artik-5-iot-gateway-kura/</link>
+      <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/making-artik-5-iot-gateway-kura/</guid>
+      <description>There are about a million ways to build or buy an IoT Gateway Device. (Actually, more like 586,000, but let&amp;rsquo;s not quibble). Each has it&amp;rsquo;s own merits, or pitfalls. You could buy one, and risk being locked into a single-vendor solution. You could build one from scratch and then be saddled with having to source the hardware, build the software, and then maintain it all and hope that you made the right choices and that it will scale.</description>
+    </item>
+    
+  </channel>
+</rss>

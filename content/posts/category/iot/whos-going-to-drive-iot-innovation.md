@@ -5,11 +5,10 @@ Author: davidgs
 Category: IoT
 Tags: innovation, IoT, Makers
 Slug: whos-going-to-drive-iot-innovation
+hero: images/Carnac.jpg
 ---
 
-![Carnac](http://davidgs.com/davidgs_blog/wp-content/uploads/2014/11/Carnac.jpg "Carnac.jpg")
-
-Let’s face it, the Internet of Things (IoT) is hot right now. And it’s only going to get hotter. Everyone wants in on the perceived coming gold rush that will be the Internet of Things. And a gold rush is most definitely predicted! Gartner has said so [here](http://www.gartner.com/newsroom/id/2688717), and [here](http://www.gartner.com/newsroom/id/2688717). IDC[says so](http://www.zdnet.com/internet-of-things-market-to-hit-7-1-trillion-by-2020-idc-7000030236/) , too. I could go on and list how many analysts and media pundits, etc. agree, but that would just be redundant. Suffice to say that basically *everyone* thinks so. And they’re all probably right.
+Let’s face it, the Internet of Things (IoT) is hot right now. And it’s only going to get hotter. Everyone wants in on the perceived coming gold rush that will be the Internet of Things. And a gold rush is most definitely predicted! Gartner has said so [here](http://www.gartner.com/newsroom/id/2688717), and [here](http://www.gartner.com/newsroom/id/2688717). IDC[says so](http://www.zdnet.com/internet-of-things-market-to-hit-7-1-trillion-by-2020-idc-7000030236/), too. I could go on and list how many analysts and media pundits, etc. agree, but that would just be redundant. Suffice to say that basically *everyone* thinks so. And they’re all probably right.
 
 To *some* of us, this isn’t a surprise. For instance, back in 2004 I started saying the following:
 
@@ -17,7 +16,7 @@ To *some* of us, this isn’t a surprise. For instance, back in 2004 I started 
 
 Yes, I said that. In 2004. And that was before there was any “Internet of Things” in any real sense. I’ve been repeating it ever since. But we (at Sun Labs) were developing a sensor platform for the internet of things, and that’s the vision we had. Score one for us.
 
-We also saw that the cost-curve on 32-bit processors would bend significantly and that in 10 years, embedded devices would all be based on 32-bit, powerful, cheap processors, so that’s what we built back then. That was the [Project Sun SPOT](http://www.sunspot.com/). 
+We also saw that the cost-curve on 32-bit processors would bend significantly and that in 10 years, embedded devices would all be based on 32-bit, powerful, cheap processors, so that’s what we built back then. That was the [Project Sun SPOT](http://www.sunspotdev.org/). 
 
 Fast forward 10 years. Here we are, with a plethora of devices from Raspberry Pi, to Intel Edison to Electric Imp to Spark, to any of the hundreds of Arduino-based devices. 32-bit sensor platforms are the default, not the outliers. Score one for us. And as noted above, all the analysts are predicting explosive growth in the IoT market space. Score two for us. 
 

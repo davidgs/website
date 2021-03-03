@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARTIK, ARTIK-520, Influx, InfluxDB, IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/artik-artik-520-influx-influxdb-iot/</link>
+    <description>Recent content in ARTIK, ARTIK-520, Influx, InfluxDB, IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/artik-artik-520-influx-influxdb-iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>InfluxDB on ARTIK-520 Redux</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/influxdb-on-artik-520-redux/</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/influxdb-on-artik-520-redux/</guid>
+      <description>Last week I wrote a piece on installing and running the InfluxDB time series database, ingestion, dashboard and action packages on your ARTIK-520, but I need to update that post, and it&amp;rsquo;s a bit more than just a few edits. Influx Data supplies the Linux binaries as packages for most of the major distributions, but the ARM distribution is just as a binary, with no package installation scripts, etc. I thought I&amp;rsquo;d show you how (and why) I fixed that for my ARTIK-520.</description>
+    </item>
+    
+  </channel>
+</rss>

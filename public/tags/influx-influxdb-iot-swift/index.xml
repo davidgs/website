@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Influx, InfluxDB, IoT, Swift on David G. Simmons</title>
+    <link>https://davidgs.com/tags/influx-influxdb-iot-swift/</link>
+    <description>Recent content in Influx, InfluxDB, IoT, Swift on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/influx-influxdb-iot-swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing Data to InfluxDB from Swift</title>
+      <link>https://davidgs.com/posts/category/database/publishing-data-to-influxdb-from-swift/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/publishing-data-to-influxdb-from-swift/</guid>
+      <description>I’ve been a very busy man. It was only a few days ago that I wrote about a new InfluxDB library for writing data from Arduino devices to InfluxDB v2 and here I am again, writing about a new library for writing data to InfluxDB. This time, it’s in Swift. Now your native Apple apps can write data directly to InfluxDB v2.0 with ease.
+It’s a really simple library to use, and you can download the entire Xcode project for it from my GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,6 +5,7 @@ Author: davidgs
 Category: Jobs, Misc, Work
 Tags: jobs, Resume, Work
 Slug: the-art-of-the-resume
+hero: images/res.png
 ---
 
 If you ask 100 people about what a resume should be, you’ll likely get close to 100 answers.
@@ -16,12 +17,12 @@ If you ask 100 people about what a resume should be, you’ll likely get close t
 
 And on and on. Most of it is conflicting, and pretty much none of it will work for everyone. These days, resumes are a crap-shoot. You’re likely not dealing with an actual person who will read your resume and evaluate it. You’re dealing with a key-word matching algorithm that is most likely not based on the skill they re actually looking for, but on the closest match to the keywords they have available. 
 
-I’ve been job hunting for a minute, and my [resume](https://davidgs.com/Resume.html) generally gets great responses, and the feedback I’ve gotten recently via interviews has been fantastic. But it’s the same resume I’ve been using for many, **many** years. I update it, of course, but it’s basically the same thing. <yawn>
+I’ve been job hunting for a minute, and my [resume](/#experiences) generally gets great responses, and the feedback I’ve gotten recently via interviews has been fantastic. But it’s the same resume I’ve been using for many, **many** years. I update it, of course, but it’s basically the same thing. \<yawn\>
 
-Then I was talking to a friend and old colleague of mine who put together his “unicorn” resume. (Someone called him a ‘unicorn’ … you know, that mythical employee that is impossible to find, but worth their weight in gold? Yeah, he and I have both been called that.). It was hilarious. He used the sort of lingo his daughters would use. Then he encouraged me to[make one too](https://davidgs.com/MadSkillz.html). So I did. 
+Then I was talking to a friend and old colleague of mine who put together his “unicorn” resume. (Someone called him a ‘unicorn’ … you know, that mythical employee that is impossible to find, but worth their weight in gold? Yeah, he and I have both been called that.). It was hilarious. He used the sort of lingo his daughters would use. Then he encouraged me to [make one too](https://davidgs.com/MadSkillz.html). So I did. 
 
-![HResume](https://davidgs.com/davidgs_blog/wp-content/uploads/2016/04/HResume.png "HResume.png"){width="463" height="600"}
+![HResume](/posts/work/images/HResume.png "HResume.png")
 
-It’s too early to tell if it’s going to be any better than the [traditional version](https://davidgs.com/Resume.html). You tell me. 
+It’s too early to tell if it’s going to be any better than the [traditional version](#experiences). You tell me. 
 
 Better yet, hire me, and get your own unicorn!

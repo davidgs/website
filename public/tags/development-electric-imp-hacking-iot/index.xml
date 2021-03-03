@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development, electric imp, hacking, IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/development-electric-imp-hacking-iot/</link>
+    <description>Recent content in development, electric imp, hacking, IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Nov 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/development-electric-imp-hacking-iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m an IoT Imp!</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/im-an-iot-imp/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/im-an-iot-imp/</guid>
+      <description>I got my electric imp and imp breakout board from SparkFun last week, and I decided to check it out today and see what I could do with it in an hour. I&amp;rsquo;m re-stocking my Internet of Things (IoT) bag of tricks, and this is the first device I&amp;rsquo;ve gotten in a while, so here&amp;rsquo;s how that went.
+Of course I have the requisite unpacking porn.
+It’s actually a pretty nice bit of kit, with a Cortex M3 stuffed into a SSD Memory Card form factor.</description>
+    </item>
+    
+  </channel>
+</rss>

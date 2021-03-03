@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARTIK, ARTIK-520, IoT, Samsung on David G. Simmons</title>
+    <link>https://davidgs.com/tags/artik-artik-520-iot-samsung/</link>
+    <description>Recent content in ARTIK, ARTIK-520, IoT, Samsung on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/artik-artik-520-iot-samsung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Save (Backup or clone) Your ARTIK-520</title>
+      <link>https://davidgs.com/posts/category/general/how-to-save-your-artik-520-backup/</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/how-to-save-your-artik-520-backup/</guid>
+      <description>Let&amp;rsquo;s say, for argument&amp;rsquo;s sake, that you have a Samsung ARTIK-520 (I assume this will work on other ARTIK modules aside from the ARTIK-0 ones) and you have it all configured the way you want, and don&amp;rsquo;t want to lose anything. Or maybe you just want to replicate it a dozen times onto a dozen different ARTIK-520s. As it stands right now, apparently, the answer is &amp;ldquo;good luck with that&amp;rdquo; as there is no mechanism to actually dump a running ARTIK-520 to a Mini-SD Card that can then be used to install it again.</description>
+    </item>
+    
+  </channel>
+</rss>

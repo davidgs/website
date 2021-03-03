@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino, Database, IoT, QuestDB on David G. Simmons</title>
+    <link>https://davidgs.com/tags/arduino-database-iot-questdb/</link>
+    <description>Recent content in Arduino, Database, IoT, QuestDB on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/arduino-database-iot-questdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IoT on QuestDB</title>
+      <link>https://davidgs.com/posts/category/database/iot-on-questdb/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/iot-on-questdb/</guid>
+      <description>As you can well imagine, I&amp;rsquo;ve been super busy in my hew job at QuestDB so this has taken me longer than I would have liked, but here we are. If you know me at all, you know that one of the first things I always do with new things is, well, connect things to them! So I immediately went to connect an IoT device to QuestDB to see how it went.</description>
+    </item>
+    
+  </channel>
+</rss>

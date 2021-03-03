@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>InfluxData, InfluxDB, IoT, IoT Data, IoT Gateway on David G. Simmons</title>
+    <link>https://davidgs.com/tags/influxdata-influxdb-iot-iot-data-iot-gateway/</link>
+    <description>Recent content in InfluxData, InfluxDB, IoT, IoT Data, IoT Gateway on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/influxdata-influxdb-iot-iot-data-iot-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an InfluxDB IoT Edge Data Collection Device</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/building-an-influxdb-iot-edge-data-collection-device/</link>
+      <pubDate>Fri, 20 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/building-an-influxdb-iot-edge-data-collection-device/</guid>
+      <description>I’ve been saying I was going to write this whole project up for some time now but it has been such a daunting task that I’ve been putting it off, starting and stopping, and generally not getting it done for a few months. Finally, I have it! This is both a hardware build and a software build, and there are a lot of moving parts, so be prepared!
+Overview I wanted to build a demonstration system that would show off the capabilities of using InfluxData — the entire TICK Stack — on the extreme edge of an IoT Architecture.</description>
+    </item>
+    
+  </channel>
+</rss>

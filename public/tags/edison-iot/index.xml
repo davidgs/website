@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edison, IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/edison-iot/</link>
+    <description>Recent content in Edison, IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/edison-iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel Edison Update</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/intel-edison-update/</link>
+      <pubDate>Wed, 06 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/intel-edison-update/</guid>
+      <description>I need to amend my previous post about the Intel Edison. It turns out it may not be the Edison module itself but rather the Intel Mini-Breakout Board that is at fault when t comes to at least the I2C failure. I still have to see about the SPI failures. Here’s why I have reached that conclusion:
+I ordered some of the Sparkfun Blocks for Intel Edison© and went back to fooling with them.</description>
+    </item>
+    
+  </channel>
+</rss>

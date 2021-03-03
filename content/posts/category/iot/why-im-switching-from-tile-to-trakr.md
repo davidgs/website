@@ -5,9 +5,10 @@ Author: davidgs
 Category: Gadgetry, IoT
 Tags: Bluetooth, gadgets, IoT
 Slug: why-im-switching-from-tile-to-trakr
+hero: images/trackr_bravo_1_pack.png
 ---
 
-![Remote pdp](https://davidgs.com/davidgs_blog/wp-content/uploads/2016/01/remote_pdp.jpg "remote_pdp.jpg"){width="70" height="68"}![Trackr bravo 1 pack](https://davidgs.com/davidgs_blog/wp-content/uploads/2016/01/trackr_bravo_1_pack.png "trackr_bravo_1_pack.png")
+![Remote pdp](/posts/category/iot/images/remote_pdp.jpg "remote_pdp.jpg") ![Trackr bravo 1 pack](/posts/category/iot/images/trackr_bravo_1_pack.png "trackr_bravo_1_pack.png")
 
 I’ve been a loyal [Tile](https://www.thetileapp.com) user since I first baked their Kickstarter project. I love the idea of being able to locate things I lose all the time, like my keys, and to keep track of stuff I **might** lose, like my DSLR, my GoPro, etc. I even used them to keep track of my cats when they wee indoor-outdoor cats. I at least knew when they were *around* even if I couldn’t find them. They’ve been a lifesaver. But I’m done with Tile. Here’s why.
 
@@ -33,6 +34,6 @@ I’m a Maker. I’m a tinkerer. I take stuff apart. I build stuff. I am a firm 
 - Metric or standard, not both.
 - Schematics shall be included.
 
-If you notice point #3 above, you’ll understand why I’m done with Tile. And Why I’ve moved to [TrakR](https://www.thetrackr.com) instead. Aside from the fact that the TrackR app has more features — like geofencing — I can **replace the damned batteries!**[ That cuts my per-year cost from about $100 to about $10, assuming I only have to replace the batteries once a year. And the up-front cost wasn’t much more. The TrackR is also more eco-friendly as I’m not throwing away the entire device every year, just disposing of a single watch battery. ]{style="font-size: 13px;"}
+If you notice point #3 above, you’ll understand why I’m done with Tile. And Why I’ve moved to [TrakR](https://www.thetrackr.com) instead. Aside from the fact that the TrackR app has more features — like geofencing — I can **replace the damned batteries!** That cuts my per-year cost from about $100 to about $10, assuming I only have to replace the batteries once a year. And the up-front cost wasn’t much more. The TrackR is also more eco-friendly as I’m not throwing away the entire device every year, just disposing of a single watch battery. 
 
-[So long Tile. I liked you, a lot. Backed you on Kickstarter even. But since they are ‘disposable’ devices, for cost and eco reasons, I'm moving over to TrackR effective immediately (since they arrived in today’s mail). If you want to join me, you can use [this link](https://www.thetrackr.com/?ref_code=tlKzz) and we’ll both get a free device!]{style="font-size: 13px;"}
+So long Tile. I liked you, a lot. Backed you on Kickstarter even. But since they are ‘disposable’ devices, for cost and eco reasons, I'm moving over to TrackR effective immediately (since they arrived in today’s mail). If you want to join me, you can use [this link](https://www.thetrackr.com/?ref_code=tlKzz) and we’ll both get a free device!

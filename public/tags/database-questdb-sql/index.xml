@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database, QuestDB, SQL on David G. Simmons</title>
+    <link>https://davidgs.com/tags/database-questdb-sql/</link>
+    <description>Recent content in Database, QuestDB, SQL on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/database-questdb-sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens When you Put Your SQL Database on the Internet</title>
+      <link>https://davidgs.com/posts/category/database/what-happens-when-you-put-your-sql-database-on-the-internet/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/what-happens-when-you-put-your-sql-database-on-the-internet/</guid>
+      <description>And then we posted it to Hacker News.
+If you listen to, well, pretty much anyone rational, they will tell you in no uncertain terms that the last thing you ever want to do is put your SQL Database on the internet. And even if you&amp;rsquo;re crazy enough to do that, you certainly would never go post the address to it on a place like Hacker News. Not unless you were a masochist anyway.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Why I&#39;m Switching from Tile to Trakr</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Why I&#39;m Switching from Tile to Trakr" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/images/trackr_bravo_1_pack.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/images/trackr_bravo_1_pack.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>January 8, 2016</p>
+        </div>
+
+        <div class="title">
+          <h1>Why I&#39;m Switching from Tile to Trakr</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p><img src="/posts/category/iot/images/remote_pdp.jpg" alt="Remote pdp" title="remote_pdp.jpg"> <img src="/posts/category/iot/images/trackr_bravo_1_pack.png" alt="Trackr bravo 1 pack" title="trackr_bravo_1_pack.png"></p>
+<p>I’ve been a loyal <a href="https://www.thetileapp.com">Tile</a> user since I first baked their Kickstarter project. I love the idea of being able to locate things I lose all the time, like my keys, and to keep track of stuff I <strong>might</strong> lose, like my DSLR, my GoPro, etc. I even used them to keep track of my cats when they wee indoor-outdoor cats. I at least knew when they were <em>around</em> even if I couldn’t find them. They’ve been a lifesaver. But I’m done with Tile. Here’s why.</p>
+<p>I realize that $12USD - $25USD per year may not sound like a lot of money, and it really isn’t, but when I started putting Tiles on lots of things, that cost, which is <em>per item, per year</em> started to feel excessive. Why is that per device per year? Because Tile has no replaceable battery. And the Tile App ‘expires’ the Tile after a year, no matter what the battery life might be. So I <strong>have to</strong> replace each tile, each year. </p>
+<p>I’m a Maker. I’m a tinkerer. I take stuff apart. I build stuff. I am a firm (and I mean <strong>very firm</strong>!) believer in the Maker’s Bill of Rights. If you’re not familiar with it, here it is from <em>Make: Magazine issue 04</em> (I’d link to the original article, but the <em>Make</em> archives appear to be dead. Good thing I have every issue ever printed still here in my office!):</p>
+<ul>
+<li>Meaningful and specific parts lists shall be included.</li>
+<li>Cases shall be easy to open.</li>
+<li>Batteries should be replaceable.</li>
+<li>Special tools are allowed only for darn good reasons.</li>
+<li>Profiting by selling expensive special tools is wrong and not making special tools available is even worse.</li>
+<li>Torx is OK; tamperproof is rarely OK.</li>
+<li>Components, not entire sub-assemblies, shall be replaceable.</li>
+<li>Consumables, like fuses and filters, shall be easy to access.</li>
+<li>Circuit boards shall be commented.</li>
+<li>Power from USB is good; power from proprietary power adapters is bad.</li>
+<li>Standard connecters shall have pinouts defined.</li>
+<li>If it snaps shut, it shall snap open.</li>
+<li>Screws better than glues.</li>
+<li>Docs and drivers shall have permalinks and shall reside for all perpetuity at archive.org.</li>
+<li>Ease of repair shall be a design ideal, not an afterthought.</li>
+<li>Metric or standard, not both.</li>
+<li>Schematics shall be included.</li>
+</ul>
+<p>If you notice point #3 above, you’ll understand why I’m done with Tile. And Why I’ve moved to <a href="https://www.thetrackr.com">TrakR</a> instead. Aside from the fact that the TrackR app has more features — like geofencing — I can <strong>replace the damned batteries!</strong> That cuts my per-year cost from about $100 to about $10, assuming I only have to replace the batteries once a year. And the up-front cost wasn’t much more. The TrackR is also more eco-friendly as I’m not throwing away the entire device every year, just disposing of a single watch battery. </p>
+<p>So long Tile. I liked you, a lot. Backed you on Kickstarter even. But since they are ‘disposable’ devices, for cost and eco reasons, I&rsquo;m moving over to TrackR effective immediately (since they arrived in today’s mail). If you want to join me, you can use <a href="https://www.thetrackr.com/?ref_code=tlKzz">this link</a> and we’ll both get a free device!</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/why-im-switching-from-tile-to-trakr.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/work/so-whats-with-all-the-jobs/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>So What&#39;s With All The Jobs??</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/iot/iot-hardware/intel-edison-update/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Intel Edison Update</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development, IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/development-iot/</link>
+    <description>Recent content in development, IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/development-iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Big Board of IoT Devices</title>
+      <link>https://davidgs.com/posts/category/iot/the-big-board-of-iot-devices/</link>
+      <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/the-big-board-of-iot-devices/</guid>
+      <description>Just for future reference, here’s the development board that sits on my desk:
+What’s on it? Well, here’s the list:
+ Intel Edison: One on the (mostly useless) Intel Mini Breakout board and one on a Sparkfun Block (more on this one in a later post) Electric Imp A couple of Arduinos — they’re actually RFDuinos, which I backed on Kickstarter. A Particle Photon A NodeMCU Some random sensors I’m working with.</description>
+    </item>
+    
+  </channel>
+</rss>

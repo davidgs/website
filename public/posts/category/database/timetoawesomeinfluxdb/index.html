@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Time to Awesome with InfluxDB</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Time to Awesome with InfluxDB" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/database/images/A-platform-for-Builders.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/database/images/A-platform-for-Builders.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>December 1, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>Time to Awesome with InfluxDB</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p><a href="https://influxdata.com/">InfluxData</a> has a thing about Time to Awesome™. So much so that they Trademarked it. No, seriously, they did. And they mean it. So let&rsquo;s go from Zero to Awesome!</p>
+<blockquote>
+<p>We are singularly focused on reducing the Time to Awesome™, we truly care about helping developers and businesses get to results faster with less complexity and less code.</p>
+</blockquote>
+<p>That’s directly from the <a href="https://www.influxdata.com/about/"><strong>About</strong></a> section of their website and they really do mean it! But just in case, I decided to test it out (again). I actually wrote a <a href="/posts/category/iot/iot-hardware/running-influxdb-on-an-artik-520/">whole blog post</a> about how easy it was to set up InfluxDB a while back, but I thought I’d do it again, just for fun. This time, I thought I’d provide proof of how easy it is, and how fast!</p>
+<h2 id="the-set-up">The Set Up</h2>
+<p>I have my trusty MacBook Pro on which I do just about everything, so that’s what I’m going to install it on. Here’s what I’m working with:</p>
+<p><img src="/posts/category/database/images/MarsEditScreenSnapz001.png" alt="MarsEditScreenSnapz001"></p>
+<p>I installed and configured InfluxDB, Chronograf, Telegraf and Kapacitor, and set up a quick system-monitoring dashboard to keep track of some system stats, all in under 5 minutes.</p>
+<h2 id="heres-the-proof">Here&rsquo;s the proof</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/DsVRTI2IgMo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="heres-how-i-did-it">Here&rsquo;s how I did it</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Davids-MacBook-Pro:~ davidgs$ brew install influxdb 
+  <span style="color:#f92672">==</span>&gt; Downloading https://homebrew.bintray.com/bottles/influxdb-1.3.6.high_sierra.bottle.tar.gz
+    Already downloaded: /Users/davidgs/Library/Caches/Homebrew/influxdb-1.3.6.high_sierra.bottle.tar.gz 
+  <span style="color:#f92672">==</span>&gt; Pouring influxdb-1.3.6.high_sierra.bottle.tar.gz
+  <span style="color:#f92672">==</span>&gt; Caveats To have launchd start influxdb now and restart at login: brew services start influxdb Or, <span style="color:#66d9ef">if</span> you don<span style="color:#e6db74">&#39;t want/need a background service you can just run: influxd -config /usr/local/etc/influxdb.conf 
+</span><span style="color:#e6db74">  ==&gt; Summary 🍺 /usr/local/Cellar/influxdb/1.3.6: 9 files, 56.4MB
+</span><span style="color:#e6db74">Davids-MacBook-Pro:~ davidgs$ brew install telegraf 
+</span><span style="color:#e6db74">  ==&gt; Downloading https://homebrew.bintray.com/bottles/telegraf-1.4.2.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">    Already downloaded: /Users/davidgs/Library/Caches/Homebrew/telegraf-1.4.2.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">  ==&gt; Pouring telegraf-1.4.2.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">  ==&gt; Caveats To have launchd start telegraf now and restart at login: brew services start telegraf Or, if you don&#39;</span>t want/need a background service you can just run: telegraf -config /usr/local/etc/telegraf.conf
+  <span style="color:#f92672">==</span>&gt; Summary 🍺 /usr/local/Cellar/telegraf/1.4.2: <span style="color:#ae81ff">8</span> files, 43.2MB
+Davids-MacBook-Pro:~ davidgs$ brew install chronograf
+  <span style="color:#f92672">==</span>&gt; <span style="color:#f92672">[</span>Installing dependencies <span style="color:#66d9ef">for</span> chronograf:**kapacitor** 
+  <span style="color:#f92672">==</span>&gt; Installing chronograf dependency: **kapacitor** 
+  <span style="color:#f92672">==</span>&gt; Downloading https://homebrew.bintray.com/bottles/kapacitor-1.3.3.high_sierra.bottle.1.tar.gz
+    Already downloaded: /Users/davidgs/Library/Caches/Homebrew/kapacitor-1.3.3.high_sierra.bottle.1.tar.gz
+  <span style="color:#f92672">==</span>&gt; Pouring kapacitor-1.3.3.high_sierra.bottle.1.tar.gz
+  <span style="color:#f92672">==</span>&gt; Caveats To have launchd start kapacitor now and restart at login: brew services start kapacitor Or, <span style="color:#66d9ef">if</span> you don<span style="color:#e6db74">&#39;t want/need a background service you can just run: kapacitord -config /usr/local/etc/kapacitor.conf
+</span><span style="color:#e6db74">  ==&gt; Summary  🍺 /usr/local/Cellar/kapacitor/1.3.3: 6 files, 79.0MB
+</span><span style="color:#e6db74">  ==&gt; Installing **chronograf** 
+</span><span style="color:#e6db74">  ==&gt; Downloading https://homebrew.bintray.com/bottles/chronograf-1.3.9.0.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">    Already downloaded: /Users/davidgs/Library/Caches/Homebrew/chronograf-1.3.9.0.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">  ==&gt; Pouring chronograf-1.3.9.0.high_sierra.bottle.tar.gz
+</span><span style="color:#e6db74">  ==&gt; Caveats To have launchd start chronograf now and restart at login: brew services start chronograf Or, if you don&#39;</span>t want/need a background service you can just run: chronograf
+  <span style="color:#f92672">==</span>&gt; Summary 🍺 /usr/local/Cellar/chronograf/1.3.9.0: <span style="color:#ae81ff">4</span> files, <span style="color:#ae81ff">21</span>
+
+Davids-MacBook-Pro:~ davidgs$ brew services start influxdb 
+  <span style="color:#f92672">==</span>&gt; Successfully started <span style="color:#e6db74">`</span>influxdb<span style="color:#e6db74">`</span> <span style="color:#f92672">(</span>label: homebrew.mxcl.influxdb<span style="color:#f92672">)</span>
+Davids-MacBook-Pro:~ davidgs$ brew services start telegraf
+  <span style="color:#f92672">==</span>&gt; Successfully started <span style="color:#e6db74">`</span>telegraf<span style="color:#e6db74">`</span> <span style="color:#f92672">(</span>label: homebrew.mxcl.telegraf<span style="color:#f92672">)</span>
+Davids-MacBook-Pro:~ davidgs$ brew services start kapacitor
+  <span style="color:#f92672">==</span>&gt; Successfully started <span style="color:#e6db74">`</span>kapacitor<span style="color:#e6db74">`</span> <span style="color:#f92672">(</span>label: homebrew.mxcl.kapacitor
+Davids-MacBook-Pro:~ davidgs$ brew services start chronograf
+  <span style="color:#f92672">==</span>&gt; Successfully started <span style="color:#e6db74">`</span>chronograf<span style="color:#e6db74">`</span> <span style="color:#f92672">(</span>label: homebrew.mxcl.chronograf<span style="color:#f92672">)</span>
+Davids-MacBook-Pro:~ davidgs$
+</code></pre></div><p>That&rsquo;s it! A total of 7 commands. 3 to install the entire TICK stack &ndash; because Chronograf has a dependency on Kapacitor, so it gets installed automatically &ndash; and 4 to start all the services and make sure they start across reboots.</p>
+<p>It just doesn&rsquo;t get any more simple than that! Add the small number of clicks to build the dashboard and you have an amazingly short Time to Awesome™!</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/database/timetoawesomeinfluxdb.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Building An IoT Gateway Device for local Alerting and Data Downsampling</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/general/time-for-a-twitter-transition/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Time for a Twitter Transition</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-set-up">The Set Up</a></li>
+    <li><a href="#heres-the-proof">Here&rsquo;s the proof</a></li>
+    <li><a href="#heres-how-i-did-it">Here&rsquo;s how I did it</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

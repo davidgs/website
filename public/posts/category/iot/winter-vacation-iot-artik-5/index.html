@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>My Winter Vacation (what I did with IoT and ARTIK-5)</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="My Winter Vacation (what I did with IoT and ARTIK-5)" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/images/eTapeProject-1-1-225x300.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/images/eTapeProject-1-1-225x300.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>January 2, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>My Winter Vacation (what I did with IoT and ARTIK-5)</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>I don&rsquo;t know about you, or what you did with your winter vacation (or if you even got one, and if you didn&rsquo;t, I&rsquo;m sorry) but one of the fun things I did with mine was to spend a little time with my <a href="http://artik.io">Samsung ARTIK</a> Dev Kit. If you read the <a href="/posts/category/iot/iot-hardware/hardware-extravaganza/">Hardware Extravaganza Post</a>, you&rsquo;ll know that I got an ARTIK-0 and an ARTIK-5 developer kit not long ago. I&rsquo;ve been up to my ears in <a href="http://mynewt.apache.org/">MyNewt</a> though and haven&rsquo;t had time to do much with them, sadly. That is, until my winter break came along.</p>
+<p>I didn&rsquo;t want to spend the whole time playing in my office and annoy my family, so I decided to just try a quick project using some existing sensor hardware I have lying around. (Note: I have a vast amount of sensor hardware &ldquo;just lying around&rdquo;) I decided to try using the <a href="https://www.adafruit.com/products/464?gclid=CjwKEAiAkajDBRCRq8Czmdj-yFgSJADikZggOOig7wQivaUivT14Q8aNI3ndBmn2oyGF3EJgiZJ-MxoCWvDw_wcB">eTape Liquid Level Sensor</a> that I&rsquo;ve already been playing with for the MyNewt project. It&rsquo;s a fairly simple Analog sensor for reading the water/liquid level in a container. Or, in my case, on my back patio which regularly floods! I also decided to pull out the ARTIK-5 first since it&rsquo;s extremely easy to get going.</p>
+<p>We&rsquo;re going to use the sensor as a <em>resistive sensor,</em> and the setup is very simple. I&rsquo;ll be using a breadboard to put this all together for illustrative purposes. First, attach a jumper-wire from 5v on the board to the breadboard.Next, attach a jumper wire from ADC0 on the board to the breadboard. This will be our ADC-in. The sensor should have come with a 560 ohm resistor, so plug that into the board between Vdd and ADC-in holes. Finally, attach a jumper from GND on the board to your breadboard. At this point, your ARTIK 5 should look like this:</p>
+<p><a href="/posts/category/iot/images/eTapeProject-1-1.png"><img src="/posts/category/iot/images/eTapeProject-1-1-225x300.png" alt="ARTIK-5 ADC Sensor Wiring"></a></p>
+<p> </p>
+<p>And your breadboard should look like this:</p>
+<p><a href="/posts/category/iot/images/eTapeProject-4.png"><img src="/posts/category/iot/images/eTapeProject-4-225x300.png" alt="Breadboard wiring"></a></p>
+<p>Now attach one of the middle 2 leads from the sensor to ground on the breadboad and the other middle lead to the ADC-in on the breadboard. That should complete the sensor hookup and your completed breadboard should look like the above.</p>
+<p>I bought a 1000 ML graduated cylinder in which to put the eTape sensor for testing this project, and here&rsquo;s what the final hookup of the sensor itself looks like:</p>
+<p><img src="/posts/category/iot/images/eTapeProject-5.png" alt="eTape Sensor in cylinder"></p>
+<p>Now all I have to do is fill it with water and &hellip; oh, wait, I probably have to write some code, huh? Actually, it turns out I have to do surprisingly little of that! I decided to give the <a href="https://nodered.org">Node-Red</a> a spin since I&rsquo;ve been writing a lot of Node.js code this year anyway. I got my ARTIK-5 up and running using the <a href="https://resin.io">Resin.io</a> site which was really fast and easy to use. Once that was done, and I had a fully operational ARTIK 5 (Note: don&rsquo;t use the <strong>slim</strong> profile, make sure you use the <strong>latest</strong> profile in your Docker setup. You&rsquo;ll need it for installing Node-Red), I simply installed Node-Red using</p>
+<pre><code>% sudo npm install -g node-red
+</code></pre><p>Once that completed, I installed the ARTIK library for Node-Red</p>
+<pre><code>% /root/.node-red
+% npm install node-red-contrib-artik
+</code></pre><p>Then, just to make things even easier, I installed the FRED module:</p>
+<pre><code>% npm install node-red-contrib-fred
+</code></pre><p>You&rsquo;ll see why FRED was a good idea in a minute. Once that was all done on the ARTIK 5 I simply started node-red:</p>
+<pre><code>% node-red
+</code></pre><p>And then connected my browser to the ARTIK-5 Node-Red server and built an app. I dragged in an ARTIK ADC and configured it:</p>
+<p>[<img src="/posts/category/iot/images/Safari005.jpg" alt="Node-RED ARTIK Sensors"></p>
+<p><a href="/posts/category/iot/images/Safari006.jpg"><img src="/posts/category/iot/images/Safari006-300x137.jpg" alt="ARTIK-5 Node-Red ADC"></a></p>
+<p>a Function</p>
+<p><a href="/posts/category/iot/images/Safari007.jpg"><img src="/posts/category/iot/images/Safari007-300x137.jpg" alt="Node-red function definition"></a></p>
+<p>and a JSON module, and then hooked it all up to a FRED-input and a FRED-output:</p>
+<p><a href="/posts/category/iot/images/Safari004.jpg"><img src="/posts/category/iot/images/Safari004-300x129.jpg" alt="ARTIK-5 Node-Red app"></a></p>
+<p>Oh, and then clicked the &lsquo;Deploy&rsquo; button. Told you it was simple.</p>
+<p>I then went over to my FRED service account at <a href="https://fred.sensetecnic.com">sensitec</a> and logged in. I created a private ADC endpoint:</p>
+<p><a href="/posts/category/iot/images/Safari009.jpg"><img src="/posts/category/iot/images/Safari009-300x180.jpg" alt="Create End-point in FRED"></a></p>
+<p>And then added a <strong>send</strong> ADC event, triggered by a timestamp:</p>
+<p><a href="/posts/category/iot/images/Safari008.jpg"><img src="/posts/category/iot/images/Safari008-300x127.jpg" alt="Send Event to ARTIK-5 in FRED"></a></p>
+<p>And a receive event that takes the returned data and inserts it into a chart:</p>
+<p><a href="/posts/category/iot/images/Preview001.jpg"><img src="/posts/category/iot/images/Preview001-300x96.jpg" alt="ARTIK Event in FRED"></a></p>
+<p>Once I started the whole thing, I had a nifty chart showing the water level in my graduated cylinder:</p>
+<p><a href="/posts/category/iot/images/Safari001.jpg"><img src="/posts/category/iot/images/Safari001-300x238.jpg" alt="Water Level Chart"></a></p>
+<p>And I wrote essentially zero code.</p>
+<p>Next I&rsquo;ll try installing a MongoDB backend on the ARTIK-5 and sending all the data to that, and then serving that data out to a javascript front-end to chart it all. That will require writing some code, so look for that in the near future!</p>
+<p>Also I&rsquo;ll work on having the actual sensor connected to the ARTIK-0 and sending the data from that to the ARTIK-5 MongoDB instance for collection and analysis. I&rsquo;m really looking forward to digging in to the ARTIK-0 a bit since that&rsquo;s more hands-on with C code &ndash; something I&rsquo;ve been neck-deep in lately with MyNewt anyway.</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/winter-vacation-iot-artik-5.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-software/building-an-app-with-apache-mynewt/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Building an App with Apache MyNewt</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/iot/iot-software/mynewt-ios-mac-apps/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Mynewt iOS And Mac Apps</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>What is, and isn&#39;t, IoT</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="What is, and isn&#39;t, IoT" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/images/IheartIOT600.jpg&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/images/IheartIOT600.jpg);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>December 2, 2014</p>
+        </div>
+
+        <div class="title">
+          <h1>What is, and isn&#39;t, IoT</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>So what, exactly, <strong>is</strong> the Internet of Things (IoT)? And what isn’t it? That depends on whom you ask, and what you mean. There are tons and tons of ‘connected’ gadgets that people call IoT devices.But are they really IoT devices? </p>
+<p>The Internet of Things is, loosely, the world of connected, internet-enabled devices. But let’s turn to <a href="http://en.wikipedia.org/wiki/Internet_of_Things">Wikipedia</a>, just for fun:</p>
+<blockquote>
+<p>The <strong>Internet of Things</strong> (<strong>IoT</strong>) is the interconnection of uniquely identifiable <a href="http://en.wikipedia.org/wiki/Embedded_system" title="Embedded system">embedded computing devices</a> <a href="http://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a> infrastructure. Typically, IoT is expected to offer advanced connectivity of devices, systems, and services that goes beyond <a href="http://en.wikipedia.org/wiki/Machine_to_machine" title="Machine to machine">machine-to-machine communications (M2M)</a> and covers a variety of protocols, domains, and applications.<sup><a href="http://en.wikipedia.org/wiki/Internet_of_Things#cite_note-M2M-IoT-1">[1]</a></sup> The interconnection of these embedded devices (including <a href="http://en.wikipedia.org/wiki/Smart_objects" title="Smart objects">smart objects</a>, is expected to usher in automation in nearly all fields, while also enabling advanced applications like a <a href="http://en.wikipedia.org/wiki/Smart_grid" title="Smart grid">Smart Grid</a>.<sup><a href="http://en.wikipedia.org/wiki/Internet_of_Things#cite_note-Smart-IoT-2">[2]</a></sup></p>
+</blockquote>
+<p>So it’s connected embedded computing devices. Sensors, actuators, and monitoring devices. They are connected devices that are accessible via the network — generally the internet — and interact with network resources in some way. They upload data to the internet, allow interaction with the device via the internet, etc. I would argue that using the internet is not actually a requirement. Many true IoT devices may only be connected to a LAN, or may only connect to each other via 802.15.4 short-range radio communications, with a gateway to a server, or network. Machine-toMachine devices (M2M) can be classified as IoT devices. But just because something has a ‘connection’ does not make it an IoT device.</p>
+<p>For instance, I don’t believe that the <a href="https://www.thetileapp.com">Tile</a> is really an IoT device. It’s a bluetooth-enabled locator beacon for objects. Don’t get me wrong, I have a bunch of them, and I use them all the time, but they’re not IoT devices. Why? Because, well, they don’t meet any of the criteria set out above. But more than that, they are not actually internet-connected devices. They do no real sensing of their own. They are, in large part, glorified RFID tags. They connect via BTLE to your smartphone and use the phone’s GPS to ‘locate’ the devices. The devices themselves really do nothing more than provide a Bluetooth beacon.</p>
+<p>In fact, in going through the list of “IoT Devices” on <a href="http://iotlist.co">iotlist</a>, I’d argue that most of them are not true IoT devices. IoT is about more than simply having a device with some connectivity to <strong>something</strong>, anything. The true Internet of Things is about those things being connected to and communicating and participating in the wider world of the internet — or at least a network. IoT devices need an identity of some sort whether that’s simply an IPv6 address or a more sophisticated identity provided by an identity broker. </p>
+<p>While I’m a huge fan of all the cool devices that connect to my smartphone, etc. — and I own far too many of them! — I am more keenly interested in the <strong>actual</strong> internet of things. Smart devices are a huge market, to be sure. People are buying such connected devices in huge numbers. As I said <a href="/posts/category/iot/whos-going-to-drive-iot-innovation/">earlier</a>, even if every person on the planet had a few of these connected devices, that’s still a limited market. When you’re talking about the <em>true</em> Internet of Things, there really is almost no upper limit to the size of the market.</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/what-is-and-isnt-iot.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-hardware/intel-edison-iot-board/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Intel Edison IoT Board</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/iot/iot-hardware/im-an-iot-imp/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>I&#39;m an IoT Imp!</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

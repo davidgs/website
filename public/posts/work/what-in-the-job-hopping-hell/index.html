@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>What in the job hopping hell?</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="What in the job hopping hell?" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/work/images/im-gonna-make-5yooa8-250x300.jpg&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/work/images/im-gonna-make-5yooa8-250x300.jpg);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>October 12, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>What in the job hopping hell?</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <h2 id="you-what">You what?</h2>
+<p>I changed jobs. Again. Yes. I did. But there&rsquo;s a good reason for it. It wasn&rsquo;t that long ago that I <a href="/posts/work/its-time-series-all-the-way-down/">posted</a> about leaving InfluxData and joining <a href="http://questdb.io">QuestDB</a> as their Head of Developer Relations. In fact, it was only 6 months ago. And yet, here I am, once again, posting about a job change. This is, you may notice, not characteristic of me. I was at Sun for 15 years, then Riverbed for 2.5 years, then InfluxData for 2.5 years. So what&rsquo;s going on?</p>
+<h2 id="whats-going-on">What&rsquo;s going on?</h2>
+<p>You ever get an offer you just can&rsquo;t refuse? Well, I  did.</p>
+<p><a href="/posts/work/images/im-gonna-make-5yooa8.jpg"><img src="/posts/work/images/im-gonna-make-5yooa8-250x300.jpg" alt="child in a tuxedo captioned &ldquo;I&rsquo;m going to make him an offer he can&rsquo;t refuse&rdquo;"></a></p>
+<p>If you work in <a href="http://devrelcollective.fun">Developer Relations</a>, then you probably know (or know of) <a href="https://twitter.com/mary_grace">Mary Thengvall</a>. She quite literally wrote <a href="https://www.amazon.com/dp/1484237471/ref=cm_sw_em_r_mt_dp_2eiHFbV0TNHX9">the book</a> on Developer Relations. If you haven&rsquo;t read it, you should. She&rsquo;s also been a friend of mine for a few years (and sort of my hero in DevRel).</p>
+<p>A couple of years ago she recommended me for a job as Director of DevRel at a small German company called <a href="https://camunda.com/">Camunda</a>. I interviewed, and was pretty excited about it, but it sort of fizzled. And then Mary came to me to let me know that, while she had been working with them to find the Director, they had decided what they <em>really</em> wanted was Mary herself! Duh! So she took the job and I couldn&rsquo;t have been happier for her. Heck, if I had the choice between hiring me or hiring Mary, I&rsquo;d have hired her too!</p>
+<p>As soon as she told me that, I said &ldquo;hire me!&rdquo; Of course. again, duh. But she didn&rsquo;t have any openings, was just settling in to the new role, and so on.</p>
+<p>Fast forward a year (ish). Mary was hiring. For senior roles. Anyone who works in Devrel knows that senior roles don&rsquo;t come around all that often, and senior roles working for Mary are a once-in-a-lifetime opportunity.</p>
+<p><a href="/posts/work/images/9d069efc9e47c091c0d18d041ed863f0.png"><img src="/posts/work/images//9d069efc9e47c091c0d18d041ed863f0-210x300.png" alt="David Byrne Once In a Lifetime poses"></a> You&rsquo;ll either get this, or you won&rsquo;t.</p>
+<p>I asked, she offered, and I had to take it!</p>
+<h2 id="so-what-now">So what now?</h2>
+<p>Now I&rsquo;m a Principal Developer Advocate at Camunda! But wait, that&rsquo;s not IoT! That&rsquo;s not Time Series Databases! WTF is going on here even?</p>
+<p>You&rsquo;re right. It&rsquo;s none of those things. But what it is, for me, is an opportunity to learn more about Developer Relations (again, from the woman who literally wrote the book on it) in one place than I ever could any other way. It&rsquo;s a way to expand my knowledge of the industry, and to learn a completely new skill (Business Process Automation &ndash; spoiler, if you dig back in my past far enough, you&rsquo;ll find I did it 20 years ago!).</p>
+<p>So here we are. And I couldn&rsquo;t be more excited or more pleased to be starting this new adventure!</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/work/what-in-the-job-hopping-hell.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/camunda/letters-to-santa-automating-joy-to-the-world-at-scale/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Letters to Santa – Automating Joy to the World, At Scale</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/iot/iot-hardware/quickly-connect-an-argon-iot-device-to-questdb/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Quickly Connect an Argon IoT Device to QuestDB</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#you-what">You what?</a></li>
+    <li><a href="#whats-going-on">What&rsquo;s going on?</a></li>
+    <li><a href="#so-what-now">So what now?</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

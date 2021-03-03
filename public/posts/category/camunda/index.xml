@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camunda on David G. Simmons</title>
+    <link>https://davidgs.com/posts/category/camunda/</link>
+    <description>Recent content in Camunda on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://davidgs.com/posts/category/camunda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Letters to Santa – Automating Joy to the World, At Scale</title>
+      <link>https://davidgs.com/posts/category/camunda/letters-to-santa-automating-joy-to-the-world-at-scale/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/camunda/letters-to-santa-automating-joy-to-the-world-at-scale/</guid>
+      <description>It’s that time of year again. The time when the world’s largest order fulfillment operation experiences its heaviest load. No, not Amazon - we’re talking about Santa Claus, Inc. - the largest logistics company in the world, with a 24-hour global delivery window at peak load.
+This year is different, however. Earlier this year, Saint Nick clicked on an ad on his Facebook feed, one promising a digital nomad lifestyle through automating his business.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -21,6 +21,8 @@ The basic parameters are:
 - About 75 attendees. Some with dogs, some in wheelchairs, some with physical disabilities of various sorts, etc.
 - The drivers and attendees change every month — there are regulars, like us, but not everyone can come/drive every month
 
+## Building a Solution
+
 Clearly [Google Maps](http://maps.google.com/) was going to be part of the solution. Also, a backend database of some sort would be required to store the information about the drivers and attendees so we wouldn’t have to re-enter it every month. I had just completed a consulting project for [StrongLoop](https://strongloop.com) applying their API creation and management framework to IoT, and it seemed a perfect solution to this problem as well. Here were the end requirements I set for myself:
 
 - Web based application that would run in any browser
@@ -34,29 +36,31 @@ Seemed simple enough. I already knew how to geolocate things on a google map via
 
 Here’s where I ended up. After this, I’ll briefly go through how I did it. I’ll walk through the work-flow a bit too. We start here, with a blank page, a Google Map, and some empty tables.
 
-![Safari034](/posts/category/programming/images/Safari034.jpg "Safari034.jpg")
+## The Results
+
+![Screen shot of the initial page with an embedded Google Map](/posts/category/programming/images/Safari034.jpg)
 
 You can click on “Add Driver” and add a new driver to the Database. You get the same form if you click “Add Attendee”. All Drivers and Attendees are persisted in a MongoDB database.
 
-![Safari035](/posts/category/programming/images/Safari035.jpg "Safari035.jpg")
+![Screen shot of an "add driver" dialog box](/posts/category/programming/images/Safari035.jpg)
 
 There is a Drop-down list of all the drivers in the database, so you just have to select the ones that are driving this month:
 
-![Safari036](/posts/category/programming/images/Safari036.png "Safari036.png")
+![Screen shot showing the dropdown list of drivers](/posts/category/programming/images/Safari036.png)
 
 Once you select a Driver, they end up in the Drivers Table, with their own ‘mini-map’. A Blue Pin is also added to the main map. As you add more drivers, you’ll see more and more Blue Pins for drivers on the main map.
 
-![Safari037](/posts/category/programming/images/Safari037.jpg "Safari037.jpg")
+![Screen shot showing the first driver added to the list](/posts/category/programming/images/Safari037.jpg)
 
 Next you select Attendees from the Attendees Drop Down list.
 
-![Safari038](/posts/category/programming/images/Safari038.jpg "Safari038.jpg")
+![Screen shot of the 'attendees' dropdown list](/posts/category/programming/images/Safari038.jpg)
 
 As you add Attendees they are added to the Attendees Table, and a Red Pin is added to the Main Map. As you select more and more Attendees, you’ll see more and more Red Pins on the Main Map.
 
-![Safari039](/posts/category/programming/images/Safari039.jpg "Safari039.jpg")
+![Screen shot showing the attendee pin gone and them added to the list](/posts/category/programming/images/Safari039.jpg)
 
-When you click on an Attendee’s pin, you get a pop-up with their information (name, address, phone number) and another pull-down list that contains all the drivers available. Just select a Driver for that Attendee. You may notice a potential problem here. What if I add more drivers to the map later? Will they show up in the pull downs of the attendees? Of course they will! I simply added a JavaScript onmousedown() handler to the <select> for the driver's list, and in there I walk the Table of Drivers to build the Select List:
+When you click on an Attendee’s pin, you get a pop-up with their information (name, address, phone number) and another pull-down list that contains all the drivers available. Just select a Driver for that Attendee. You may notice a potential problem here. What if I add more drivers to the map later? Will they show up in the pull downs of the attendees? Of course they will! I simply added a JavaScript onmousedown() handler to the \<select\> for the driver's list, and in there I walk the Table of Drivers to build the Select List:
 
 ```js
 for (var i = 1, row; row = dTable.rows[i]; i++) {
@@ -76,11 +80,11 @@ for (var i = 1, row; row = dTable.rows[i]; i++) {
 
 It is a little more complicated than you might think is necessary because I reference everything by the id from the MongoDB database so that I can look it up later more easily. I don't keep track of the Driver's address, phone number, etc. from the tables because a lookup by id is **very** fast, so as long as I have the id handy, I can get any other information quickly.
 
-![Safari040](/posts/category/programming/images/Safari040.jpg "Safari040.jpg")
+![Tooltip when you hover over a pin on the map](/posts/category/programming/images/Safari040.jpg)
 
 Once you assign a Driver to an Attendee, their Red Pin is moved from the Main Map to the Driver’s mini-map on which you can Show/Hide the actual driving route. Yes, it’s small, and hard to see the actual route. Also, the Attendee’s entry in the Attendee table is turned green and a Driver Name is filled in for them. This is so that it is easy to tell when everyone has a driver and you’re done) No more red pins on the main map and all the Attendees are green.
 
-![Safari041](/posts/category/programming/images/Safari041.jpg "Safari041.jpg")
+![Shwoing the changes described above](/posts/category/programming/images/Safari041.jpg)
 
 ## So what’s missing?
 

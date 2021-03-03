@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>OpenHAB Server on ARTIK-520</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="OpenHAB Server on ARTIK-520" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/iot-hardware/images/logo-2.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/iot-hardware/images/logo-2.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>March 28, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>OpenHAB Server on ARTIK-520</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>As I said earlier, when you have a hammer &hellip; So I decided to set up Yet Another IoT Gateway. This time I took a look at <a href="http://www.openhab.org">OpenHAB</a> the &ldquo;vendor and technology agnostic open source automation software for your home.&rdquo; Why not, right? I&rsquo;ve already set up a <a href="/posts/category/iot/iot-software/artik-520-droplit-io-edge-device">Droplit.io edge server</a>, and an <a href="/posts/category/general/making-artik-5-iot-gateway-kura/">Eclipse Kura server</a>, so why not give one more a try right? Right. So let&rsquo;s dive in.</p>
+<h2 id="setup">Setup</h2>
+<p>Setup was incredibly easy. Almost scary easy. Seriously. As always, I started with the basic ARTIK Fedora image, and of course updated it with all the latest:</p>
+<pre><code>[root@localhost ~]# dnf update
+</code></pre><p>That takes a while.</p>
+<p><strong>Note:</strong> I start with a fresh OS for each of these projects. Thanks to being able to <a href="/posts/category/general/how-to-save-your-artik-520-backup/">dump a running system</a> back out to mini-SD Card, I just dump what I was working on to a card, burn a fresh card, and start over.</p>
+<p>You&rsquo;re going to need that Zulu JVM I talked about <a href="/posts/gategory/iot/make-your-artik-520-scream/">earlier</a>. Installation is quick and easy, but don&rsquo;t skip it! Apparently the open-jdk version of the JVM won&rsquo;t really give you much joy with OpenHAB. I didn&rsquo;t try it, I just installed the Zulu JVM and went on. In case you forgot, once you&rsquo;ve <a href="https://www.azul.com/products/zulu/">downloaded the Zulu JVM</a>:</p>
+<pre><code>[root@localhost ~]# tar xvf ezdk-1.8.0_112-8.19.0.31-eval-linux_aarch32hf.tar
+[root@localhost ~]# update-alternatives --install /usr/bin/java java ~/ezdk-1.8.0_112-8.19.0.31-eval-linux_aarch32hf/jre/bin/java 100
+[root@localhost ~]# update-alternatives --config java
+</code></pre><p>The only additional package you are going to need is unzip because someone thought it was a good idea to <em>not</em> include unzip (or zip for that matter) in the base image. Whatever.</p>
+<pre><code>[root@localhost ~]# dnf install unzip
+</code></pre><p>Easy. Done. Then get the openHAB server. The instructions for this install are <a href="http://docs.openhab.org/installation/linux.html#manual-installation">here</a>, but really I&rsquo;ll tell you everything you need to know.</p>
+<pre><code>[root@localhost ~]# cd /tmp
+[root@localhost /tmp]# wget -O openhab-download.zip https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab%2F2.0.0%2Fopenhab-2.0.0.zip
+[root@localhost /tmp]# unzip openhab-download.zip -d /opt/openhab2
+[root@localhost /tmp]# rm openhab-download.zip
+</code></pre><p>The instructions say to create an openhab user, and then run the openhab server as that user. Don&rsquo;t do that. I guess you can figure out how, but when I did, I kept getting:</p>
+<pre><code>/opt/openhab2/runtime/bin/karaf: line 28: cd: /root: Permission denied
+: JAVA_HOME is not valid: /root/ezdk-1.8.0_112-8.19.0.31-eval-linux_aarch32hf/jre/
+</code></pre><p>So finally I just ran it as root. It works just fine as root.</p>
+<p>That&rsquo;s really all there was too it! Told you it was easy!</p>
+<h2 id="using-openhab">Using OpenHAB</h2>
+<p>This is where things got fun! Once the OpenHAB server was started, I connected to the ARTIK-520 using my browser (port 8080, just FYI) and <strong>Voilà</strong>! I had a dashboard of sorts. But nothing was there. Hmmm &hellip; okay, so I had to go install some &ldquo;bindings&rdquo;.</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Safari017.jpg" alt="Safari017"></p>
+<p>There are a <strong>lot</strong> of them.  I chose the ones for the stuff I have. A Samsung TV, some Nest Stuff and those Wemo switches. As soon as I installed those bindings, stuff started showing up in my &ldquo;Inbox&rdquo;. Like, instantly! What showed up right away were the Wemo switches. As soon as I fixed the network connection on my Samsung TV, it also showed up right away. The Nest stuff is going to take a bit more work since I had to register as a Nest Developer, and I haven&rsquo;t finished jumping through all their hoops just yet.  But the bindings are installed:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Safari016.jpg" alt="Safari016"> &ldquo;Safari016.jpg&rdquo;){width=&ldquo;598&rdquo; height=&ldquo;208&rdquo;}</p>
+<p>I installed the Z-Wave binging for reasons that now escape me. Deal with it.</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Safari015.jpg" alt="Safari015"></p>
+<p>And those are all the devices that appeared. And now I can control them!</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>The Kura Server took me a week or two to get working, with a fair amount of support from the Eclipse engineers responsible. It really wasn&rsquo;t designed to run on an embedded platform like the ARTIK-520, and had never been tested there, so it&rsquo;s not really surprising.</p>
+<p>The Droplit.io Edge Server took me about a week. Actually, the install was pretty easy once I gave up on trying to build the system on the ARTIK-520. Remember my rule: Don&rsquo;t build/compile on ARTIK-520 unless absolutely necessary. Then it took a few days to get a bug worked out so it could find my Wemo switches, but that&rsquo;s about all it was going to find.</p>
+<p>The openHAB server was by far the easiest. Took about 2 hours, start to finish, including building/flashing/updating the OS. And it found a lot more devices almost instantly (once I figured out to install the bindings. I don&rsquo;t always read <strong>all</strong> the directions.). It&rsquo;s <strong>very</strong> responsive and easy to deal with.</p>
+<p>I&rsquo;ve got a bunch more stuff to investigate here, like the &lsquo;experimental&rsquo; rules engine, and I may try out the Text-to-Speech integration if I have time.</p>
+<p>In all honesty, this may be my last ARTIK-520 integration test for a while. They aren&rsquo;t actually paying me to do them. In fact, no one is paying me to do anything right now, so until I get <strong>that</strong> fixed, I&rsquo;ll probably spend most of my time job-hunting. And maybe some more time on the resistbot project. This is all easily fixable if someone would decide to hire me. :-)</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/iot-hardware/openhab-server-artik-520.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-software/artik-520-droplit-io-edge-device/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>ARTIK-520 as a Droplit.io Edge Device</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/beans/beans/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Coffee Beans</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#using-openhab">Using OpenHAB</a></li>
+    <li><a href="#conclusions">Conclusions</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

@@ -15,4 +15,4 @@ This is but a small sampling of some of the things I've done, and more will sure
 
 One of the first pieces I made (well, 2 pieces, really) was a pair of Claro Walnut End Tables. Here's one of them:
 
-![Claro Walnut End Table](hero.jpg)
+![Claro Walnut End Table](/posts/hobbies/hero.jpg)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARTIK, ARTIK-053, IoT, Samsung on David G. Simmons</title>
+    <link>https://davidgs.com/tags/artik-artik-053-iot-samsung/</link>
+    <description>Recent content in ARTIK, ARTIK-053, IoT, Samsung on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/artik-artik-053-iot-samsung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming the ARTIK-0 IoT Devices</title>
+      <link>https://davidgs.com/posts/category/iot/iot-software/programming-the-artik-0-iot-devices/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-software/programming-the-artik-0-iot-devices/</guid>
+      <description>If you’ve read this blog much at all you’ll have noticed that I’ve been a fairly big fan of the ARTIK line of IoT boards (see here, here, here, here, here, here , here and here) but I really need to clarify that a bit now. I love my ARTIK-520 board. It runs the entire InfluxData stack nicely and is a solid, reliable place to deploy IoT-Edge software. I really like it.</description>
+    </item>
+    
+  </channel>
+</rss>

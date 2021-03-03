@@ -5,9 +5,8 @@ Author: davidgs
 Category: Evangelism, Gadgetry, IoT
 Tags: IoT, Meetup
 Slug: ncriot-meetup
+hero: images/RIoT-Logo-2016-200x100.png
 ---
-
-![RIoT Logo 2016 200x100](https://davidgs.com/wp-content/uploads/2017/05/RIoT-Logo-2016-200x100.png "RIoT-Logo-2016-200x100.png")
 
 If you [follow me on Twitter](https://twitter.com/davidgsIoT), you'll already know that I was at the [NCRIoT](http://www.ncriot.org) IoT [Meetup](https://www.meetup.com/NC-RIoT-Regional-Internet-of-Things/) yesterday at the NASCAR Hall of Fame in Charlotte, NC. You may not know what NC RIoT is. Hell, until recently, I didn't either, which is a crime really because it's an amazing group of IoT *fanatics* doing some really cool stuff with IoT. I even met a guy who does as many crazy things with IoT as I do -- you should follow [@LogicalDan](https://twitter.com/LogicalDan) on twitter, and tweet at him in case he's wearing his shirt that lights up when you tweet at him. No really, his shirt blinks like crazy when you tweet him. Did I not tell you I met *my people* yesterday? 
 
@@ -21,5 +20,3 @@ So Anyway, why was it so great? Well, for me, not so much because of it being at
 - Hearing from NXP, Nordic, etc. both on the Panel and then at their booths during the evening activities.
 
 I wish I'd taken more pictures, especially of some of the stuff Dan brought along, but I was too busy listening and taking notes to bother whipping out my phone all the time. This is why I don't have an Instagram feed: I suck at taking pictures of literally everything that happens. 
-
-</p>

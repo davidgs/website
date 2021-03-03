@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Building the World&#39;s Smallest InfluxDB Server</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Building the World&#39;s Smallest InfluxDB Server" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/database/images/giant-board-pin-out-1024x690.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/database/images/giant-board-pin-out-1024x690.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>February 13, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Building the World&#39;s Smallest InfluxDB Server</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>I&rsquo;ve built a lot of <a href="https://www.influxdata.com/products/influxdb-overview/">InfluxDB</a> servers in my time here, and I&rsquo;ve built some pretty esoteric ones at that, but I think I&rsquo;ve finally pulled off what can only be described as the World&rsquo;s Smallest InfluxDB Server! Back in the summer of 2019, I saw a project on <a href="https://www.crowdsupply.com/groboards/giant-board">CrowdSupply.com</a> for something called the &lsquo;Giant Board&rsquo;. It looked really, really cool! A complete Single Board Computer (SBC) that ran Linux, all in a Feather form factor. I immediately backed it! Then, thinking about it for a second, I backed it <em>again</em>! So I got 2 of these things. Total accident, I swear.</p>
+<p>Some specs. Here&rsquo;s what the Giant Board actually is:</p>
+<p><strong>Giant Board Specs</strong>:</p>
+<ul>
+<li><strong>Processor</strong>: Microchip SAMA5D2 ARM® Cortex®-A5 Processor 500 MHz</li>
+<li><strong>Memory</strong>: 128 MB DDR2 RAM</li>
+<li><strong>Storage</strong>: microSD card</li>
+<li><strong>Sensing</strong>: 6 x 12-bit ADC with 3.3 V reference and external trigger</li>
+<li><strong>Actuation</strong>: 4 x 16-bit PWM with external trigger</li>
+<li><strong>Connectivity</strong>: 1 x I²C, 1 x SPI, 1 x UART, more with Flexcom</li>
+<li><strong>Power</strong>: via USB, with support for LiPo batteries</li>
+<li><strong>Operating System</strong>: mainline Linux kernel</li>
+</ul>
+<p>All in this tiny form-factor that I usually use for Microcontrollers!</p>
+<p>Well, a few weeks ago, they arrived! So, some unboxing pictures:</p>
+<p><img src="/posts/category/database/images/IMG_6750-768x1024.png" alt="GiantBoard in package"></p>
+<p>Wait, the whole thing fits in that one little bag? Yes. Not only that — there are multiple parts in that bag! And I realize (now) that there&rsquo;s no scale to that bag in the picture, but that&rsquo;s a Mac Mouse next to it. I&rsquo;d retake the picture, but I already threw the bags away!</p>
+<p><img src="/posts/category/database/images/IMG_6752-1-768x1024.png" alt="Giant Board Parts"></p>
+<p>That&rsquo;s right: I ordered the WiFi Feather Wing add-on because, after all, what&rsquo;s an IoT board — and especially what&rsquo;s an InfluxDB server — without networking!</p>
+<p><img src="/posts/category/database/images/IMG_6754-1-768x1024.png" alt="Giant Board with Feather wing"></p>
+<p>And just for scale, that&rsquo;s a US Quarter in between them. So that&rsquo;s going to be my server <em>and</em> my network interface! For something called the &lsquo;Giant Board&rsquo; it sure is small!</p>
+<p>After a little soldering, I had it all put together and, with the addition of a MicroSD card, it booted up!</p>
+<p><img src="/posts/category/database/images/Screen-Shot-2020-02-11-at-9.04.12-AM.png" alt="Command line with login to the Giant Board"></p>
+<p>Woah! This tiny little thing runs Debian Linux? Why yes, yes it does! So that makes <a href="https://docs.influxdata.com/influxdb/v1.7/introduction/installation/">installing InfluxDB</a> super simple since we already ship ARMv7 binaries for InfluxDB and all the rest of the <a href="https://www.influxdata.com/time-series-platform/">TICK Stack</a>!</p>
+<p><img src="/posts/category/database/images/Screen-Shot-2020-02-11-at-9.07.54-AM.png" alt="Terminal showing influxd running"></p>
+<p>Ok, sure, it&rsquo;s currently hammering this tiny CPU, but it is also running!</p>
+<p><img src="/posts/category/database/images/Kapture-2020-01-21-at-12.22.19-1024x372.gif" alt="live shot of a dashboard on the Giant Board"></p>
+<p>And as you can see, the dashboard runs in <a href="https://www.influxdata.com/time-series-platform/chronograf/">Chronograf</a> to give me a view into how the whole thing is running!</p>
+<p>Now, would I run this as a production system? Absolutely not! As you can see, it is using far too many system resources on such a small device. Would I run it as an edge collection and forwarding device? Quite possibly. Would I run it as an embedded <a href="https://www.influxdata.com/time-series-platform/telegraf/">Telegraf</a> agent device? 100% absolutely. Especially since I can also do this with it:</p>
+<p><img src="/posts/category/database/images/IMG_6779-768x1024.png" alt="Giant Board running on battery"></p>
+<p>That&rsquo;s right, I can run it on a battery! A rechargeable LiPo battery at that (and the recharging circuitry is built in to the board!). And for completeness, I&rsquo;ll provide a pin-out here so you can see what <em>else</em> I can add to this thing — sensors, actuators, etc., — to make it both a data node and a sensor node:</p>
+<p><img src="/posts/category/database/images/giant-board-pin-out-1024x690.png" alt="Giant Board pinout map"></p>
+<p>Next I will build a version of InfluxDB 2.0 for ARMv7 and see if that runs either better or worse on this device, so watch this space to see what happens!</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/database/building-the-worlds-smallest-influxdb-server.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/this-whole-thing-stinks/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>This Whole Thing Stinks!</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/database/iot-data-from-other-sources-mysql/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>IoT Data from Other Sources MySQL</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

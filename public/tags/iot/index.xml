@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT on David G. Simmons</title>
+    <link>https://davidgs.com/tags/iot/</link>
+    <description>Recent content in IoT on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rev&#39;ing the Demo Hardware</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/reving-the-demo-hardware/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/reving-the-demo-hardware/</guid>
+      <description>If you’ve been reading me for any length of time at all, you’ll know that I build lots of little hardware projects. What better way to highlight the IoT capabilities of InfluxDB than to build hardware that writes data to it constantly! But some of my hardware demos have been getting old, and some of them have been getting abused, so I decided it was time to revamp them with some new hardware, I’m even going to make them fully wireless by adding LiPo batteries so they can go mobile during presentations and demos!</description>
+    </item>
+    
+    <item>
+      <title>The (Updated) Big Board of IoT</title>
+      <link>https://davidgs.com/posts/category/iot/the-updated-big-board-of-iot/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/the-updated-big-board-of-iot/</guid>
+      <description>You may recall that at one point a year ago I posted a picture of my &amp;ldquo;Big Board of IoT Development&amp;rdquo;. I had a half dozen or so IoT development nodes and some sensors on it that I was working on. Since then, things have gotten significantly worse &amp;ndash; or better, depending on your point of view. So I thought I&amp;rsquo;d drop another picture on you. {width=&amp;ldquo;600&amp;rdquo; height=&amp;ldquo;450&amp;rdquo;}
+So obviously I can&amp;rsquo;t use all those boards on the giant breadboard.</description>
+    </item>
+    
+    <item>
+      <title>New Hardware</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/new-hardware/</link>
+      <pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/new-hardware/</guid>
+      <description>I should have posted this back in October, but a few things happened. So I’m posting it now. I saw a few articles on the Spark.io board a while back, and had been anxiously awaiting its release. Then I got really really busy, and forgot all about it. Then I got unbusy again, and lo and behold, it was now called particle.io, and they had a few different boards. The Photon and the Electron.</description>
+    </item>
+    
+    <item>
+      <title>How Do We Get to 20 Billion?</title>
+      <link>https://davidgs.com/posts/category/general/how-do-we-get-to-20-billion/</link>
+      <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/how-do-we-get-to-20-billion/</guid>
+      <description>During an interview today, I was asked the question “So where do these numbers come from? How do we get to 20 billion IoT devices?” Great question! How, exactly, do we get to 20 billion (or 30 billion, or a trillion) IoT devices? We’re certainly not going to get there with wearable devices and other personal gadgets. Well, we might but it would be a stretch, and the probability is near-zero.</description>
+    </item>
+    
+    <item>
+      <title>Is IoT Happening or Not in 2015?</title>
+      <link>https://davidgs.com/posts/category/iot/is-iot-happening-or-not-in-2015/</link>
+      <pubDate>Fri, 02 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/is-iot-happening-or-not-in-2015/</guid>
+      <description>It’s clear that IoT is the buzzword of the minute. Maybe the buzzword of the year. Everyone’s talking about it, mentioning it, making predictions about it and claiming to be a player in it. I am among those, but I have the background and the history to back it up. But after reading this article from Electronics Weekly.com, I’m just aggravated. It is annoyingly titled “The Internet of Things is Not Happening” which is just plain wrong.</description>
+    </item>
+    
+    <item>
+      <title>The IoT Ecosystem</title>
+      <link>https://davidgs.com/posts/category/iot/the-iot-ecosystem/</link>
+      <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/the-iot-ecosystem/</guid>
+      <description>What is the Internet of Things (IoT) anyway? And what makes up the IoT ecosystem? Yes, IoT is the buzzword of the year. Yes, everyone thinks everything is IoT these days. But just because a thing connects to the internet doesn’t mean it’s IoT.
+In thinking about this idea, I put together the following presentation, of sorts. It’s HTLM5, and can take a while to load, but check it out and let me know what you think in the comments section.</description>
+    </item>
+    
+    <item>
+      <title>Here Comes IoT ... Ready or Not!</title>
+      <link>https://davidgs.com/posts/category/general/here-comes-iot-ready-or-not/</link>
+      <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/here-comes-iot-ready-or-not/</guid>
+      <description>As I’ve said before, everyone is talking about the Internet of things (IoT). It’s the buzzword du jour. It’s going to be huge, HUGE I tell you!! Billions and billions of devices connecting to the internet over the next 6 years. And that’s just the devices side of things. Then there&amp;rsquo;s the software side. The API services. The data analytics side of things. The Authentication and Identity Management areas. To say nothing of the cloud storage requirements.</description>
+    </item>
+    
+    <item>
+      <title>Making a Button</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/making-a-button/</link>
+      <pubDate>Tue, 18 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/making-a-button/</guid>
+      <description>I can’t resist. I mean really. Who doesn’t need a big red button that you can program to … act like a big red button? But it’s so much more than just a button! I mean, a button is just something you push, right? This? This is so much more!
+ The bttn communicates with the powerful bt.tn servers in the cloud. They dispatch messages and actions to almost any internet services so that what you want gets done.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>InfluxData, InfluxDB, IoT, Poop Detector on David G. Simmons</title>
+    <link>https://davidgs.com/tags/influxdata-influxdb-iot-poop-detector/</link>
+    <description>Recent content in InfluxData, InfluxDB, IoT, Poop Detector on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/influxdata-influxdb-iot-poop-detector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This Whole Thing Stinks!</title>
+      <link>https://davidgs.com/posts/category/iot/this-whole-thing-stinks/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/this-whole-thing-stinks/</guid>
+      <description>First of all, don&amp;rsquo;t ask I have no idea where this idea came from, it just happened. I keep saying &amp;ldquo;I&amp;rsquo;m not especially proud of this&amp;rdquo; but in reality? I sort of am because it&amp;rsquo;s funny as shit (pun intended). Some projects came across my twitter feed that included (I shit you not) a 3-D printable model of the 💩 emoji. I remember nothing else about that project, but you&amp;rsquo;d better believe that I went straight for that STL file!</description>
+    </item>
+    
+  </channel>
+</rss>

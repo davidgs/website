@@ -5,13 +5,12 @@ Author: davidgs
 Category: IoT
 Tags: IoT, small business
 Slug: gulp-im-really-doing-this
+hero: images/NewLogo-0.png
 ---
 
-![NewLogo 0](https://davidgs.com/davidgs_blog/wp-content/uploads/2015/12/NewLogo-0.png "NewLogo-0.png")
+Well, as you [know](/posts/work/a-shock-to-the-system/), I have been in the market for a new job lately. **Really** bad timing to be looking for a full-time gig what with the holidays, the end of many companies’ fiscal years, etc. Great timing. 
 
-Well, as you [know](https://davidgs.com/davidgs_blog/2015/a-shock-to-the-system/), I have been in the market for a new job lately. **Really** bad timing to be looking for a full-time gig what with the holidays, the end of many companies’ fiscal years, etc. Great timing. 
-
-I decided it was time to take the bull by the horns, so to speak, and do something about it myself So I have co-founded Dragonfly IoT, a full-service IoT company. You can check out our new [website](http://dragonflyiot.com/) (some slick HTML5 slinging involved there, if I do say so myself!) for a little bit more about us. In a nutshell, we do Internet of Things (IoT) hardware, software, and complete IoT solutions. 
+I decided it was time to take the bull by the horns, so to speak, and do something about it myself So I have co-founded Dragonfly IoT, a full-service IoT company. You can check out our new [website](https://dragonflyiot.com/) (some slick HTML5 slinging involved there, if I do say so myself!) for a little bit more about us. In a nutshell, we do Internet of Things (IoT) hardware, software, and complete IoT solutions. 
 
 “But I don’t need an IoT solution” you say? I disagree. It’s amazing how many people I talk to that have a specific business problem to which they see no solution. I do. I see an IoT solution.
 

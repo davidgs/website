@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Downsampling, IoT, IoT Data, IoT Gateway on David G. Simmons</title>
+    <link>https://davidgs.com/tags/data-downsampling-iot-iot-data-iot-gateway/</link>
+    <description>Recent content in Data Downsampling, IoT, IoT Data, IoT Gateway on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/data-downsampling-iot-iot-data-iot-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building An IoT Gateway Device for local Alerting and Data Downsampling</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling/</guid>
+      <description>There are all sorts of ways to architect your IoT Deployment, and what’s right for one enterprise will not necessarily be right for another. Depending on the size and complexity of your IoT project , there can be, of course, a lot of components. One of the more universal architectures is to deploy sensor hubs or gateway devices to collect data from a number of sensor nodes and then forward that data on to an upstream data collection system for the enterprise.</description>
+    </item>
+    
+  </channel>
+</rss>

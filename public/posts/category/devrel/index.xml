@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevRel on David G. Simmons</title>
+    <link>https://davidgs.com/posts/category/devrel/</link>
+    <description>Recent content in DevRel on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jun 2020 08:06:25 +0600</lastBuildDate><atom:link href="https://davidgs.com/posts/category/devrel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Journey into Tech and DevRel</title>
+      <link>https://davidgs.com/posts/category/devrel/my-journey-into-tech-and-devrel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/devrel/my-journey-into-tech-and-devrel/</guid>
+      <description>A bunch of people I know have been writing their “Journey into Tech” blogs lately, and a few of them have been pestering me to write mine, so here it is. It’s non-traditional, and filled with detours and missteps, so if you’re trying to get into tech, take heart!
+Oddly enough, I was actually born into ‘tech’ at some level. My mother was a highly respected computer scientist for all of my life.</description>
+    </item>
+    
+    <item>
+      <title>Return to IoT Evangelism</title>
+      <link>https://davidgs.com/posts/category/devrel/iot-evangelism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/devrel/iot-evangelism/</guid>
+      <description>Things change. What’s that saying in Computer Science? “Variables won’t. Constants aren’t.” The only thing that never changes is that everything changes. And so things are (once again) changing for me. And I do mean in a good way!
+It’s been a few years, and it’s taken a fair amount of effort, but I’m moving back into the space I know the best, and where my heart lies: The Internet of Things (IoT).</description>
+    </item>
+    
+    <item>
+      <title>Where Have My Blog Posts Gone?</title>
+      <link>https://davidgs.com/posts/category/devrel/where-have-my-blog-posts-gone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/devrel/where-have-my-blog-posts-gone/</guid>
+      <description>I was blogging quite regularly here for some time, and suddenly not so much. Why is that? Well, if you follow me on Twitter, or LinkedIn, you’ll know that as a result of (well, sort of) a couple of my recent blog posts (specifically this one and this one) I was hired as the Senior Developer Evangelist at InfluxData. And I have to say, it’s awesome. Really. Fantastic company. Amazing people to work with.</description>
+    </item>
+    
+    <item>
+      <title>Why Don&#39;t you have an Evangelist Yet?</title>
+      <link>https://davidgs.com/posts/category/devrel/why-dont-you-have-an-evangelist-yet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/devrel/why-dont-you-have-an-evangelist-yet/</guid>
+      <description>To far too many people in the high tech world &amp;ldquo;Evangelism&amp;rdquo; is a dirty word. It smacks of marketing and sales and isn&amp;rsquo;t technical. Companies want technical engineers, they want marketing professionals. They want sales professionals. They overlook the importance of evangelism. This is going to be a bit long, and a bit of a personal history lesson in some ways, but stick with me and you&amp;rsquo;ll see why Technology Evangelism is so important.</description>
+    </item>
+    
+  </channel>
+</rss>

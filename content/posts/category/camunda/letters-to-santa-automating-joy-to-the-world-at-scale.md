@@ -4,10 +4,11 @@ Date: 2020-12-18
 Author: davidgs
 Category: BPMN, DevRel
 Slug: letters-to-santa-automating-joy-to-the-world-at-scale
-hero: santa.png
+hero: images/santa.png
 ---
 
 ![Santa on a water bike](/posts/category/camunda/slack-imgs.com-2-1024x639.jpeg)
+
 It’s that time of year again. The time when the world’s largest order fulfillment operation experiences its heaviest load. No, not Amazon - we’re talking about Santa Claus, Inc. - the largest logistics company in the world, with a 24-hour global delivery window at peak load.
 
 This year is different, however. Earlier this year, Saint Nick clicked on an ad on his Facebook feed, one promising a digital nomad lifestyle through automating his business. Sick of the Arctic weather and the stress of traveling, the thought of sitting on a beach in Thailand - while still bringing joy to children around the world - was enticing.

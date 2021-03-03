@@ -4,9 +4,8 @@ Date: 2015-10-05
 Author: davidgs
 Category: IoT, Jobs
 Slug: a-shock-to-the-system
+hero: images/monty-python-s-the-meaning-of-life.jpg
 ---
-
-![Monty python s the meaning of life](https://davidgs.com/davidgs_blog/wp-content/uploads/2015/10/monty-python-s-the-meaning-of-life.jpg "monty-python-s-the-meaning-of-life.jpg"){width="150" height="112"}
 
 Well that was a bit of a shocker!
 
@@ -18,6 +17,6 @@ Business priorities change. Sometimes a company is just not in the right place, 
 
 So once again I’m looking for another amazing opportunity in the IoT space. If you’ve read through my [website](https://davidgs.com/) you know that I’m a pioneer in IoT having been working on IoT since before there really was an IoT. That would be [Project Sun SPOT](http://www.sunspotdev.org/), which Oracle killed a year or so ago. I’m at least helping keep that community alive a little bit by running the new site. It’s funny that after all these years, I still get contacted on a regular basis by Sun SPOT users that are still using that technology and are looking for support. 
 
-So if your company is serious about engaging the developer community in growing your IoT engagements, you should call me. I’ve got over a decade of experience in driving developer engagement in the IoT. I’ve got an “infectious enthusiasm” for the IoT and the near-limitless possibilities it can enable. But please, let’s only talk if you’re serious about listening, and taking action, on engaging a developer community and moving forward, quickly. If you aren’t interested in hearing — and implementing — a serious, possibly game-changing strategy, we’d both end up frustrated. I’ll say things you might not want to hear, but as [history has proven](http://davidgs.com/davidgs_blog/2014/whos-going-to-drive-iot-innovation/) again and again, I’m often right. And I’ll implement. I’ll built things, using your platform, to show what’s possible. It’s what I do.
+So if your company is serious about engaging the developer community in growing your IoT engagements, you should call me. I’ve got over a decade of experience in driving developer engagement in the IoT. I’ve got an “infectious enthusiasm” for the IoT and the near-limitless possibilities it can enable. But please, let’s only talk if you’re serious about listening, and taking action, on engaging a developer community and moving forward, quickly. If you aren’t interested in hearing — and implementing — a serious, possibly game-changing strategy, we’d both end up frustrated. I’ll say things you might not want to hear, but as [history has proven](/posts/category/iot/whos-going-to-drive-iot-innovation/) again and again, I’m often right. And I’ll implement. I’ll built things, using your platform, to show what’s possible. It’s what I do.
 
 So let’s get started on making the IoT a reality for your business!

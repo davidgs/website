@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Running InfluxDB on an ARTIK-520</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Running InfluxDB on an ARTIK-520" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/iot-hardware/images/open-data-1_0.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/iot-hardware/images/open-data-1_0.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>July 14, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>Running InfluxDB on an ARTIK-520</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>Let&rsquo;s face it, the IoT is about data. I <a href="/posts/category/iot/you-havent-seen-big-data-yet/">said it</a> just a few weeks ago. It&rsquo;s about collecting data. <strong>Lots</strong> of data. But it&rsquo;s actually about a lot more than just collecting data. Simply collecting data doesn&rsquo;t really get you anywhere if all you do is collect it. To be useful, IoT data has to be relevant, accurate, and actionable. That last part is the key, really. Actionable data. In order to make your data actionable, you have to be able to analyze it, in real time preferably. Now your data problems are growing. You&rsquo;ve got a literal tsunami of time-series data pouring in and your spending all your resources just ingesting it. Now I&rsquo;m telling you that you need to also analyze it, and take actions based on that analysis <em>in real time</em>?! Get out. </p>
+<p>Don&rsquo;t shoot the messenger. You&rsquo;re the one that wanted to deploy an IoT solution to monitor all 10,000 of your whosiwhatsits, not me. But I&rsquo;m going to tell you how to solve it. </p>
+<h2 id="not-the-artik-520-again">Not the ARTIK-520 Again!</h2>
+<p>Yes, the ARTIK-520 again. I had a Linux server here in the office that would probably have been a nice place to do this, but it&rsquo;s gone to its home now (I was only fostering it and making it useful before shipping it off to live a long and productive life as an Active Directory Server. Don&rsquo;t ask. We will never speak of it again). I could have used a Raspberry Pi, or even the <a href="/posts/category/iot/iot-hardware/accessing-your-raspberry-pi-zero-w/">Raspberry Pi Zero W</a> that I have sitting here. As you know, I have a <a href="/posts/category/iot/the-updated-big-board-of-iot/">plethora</a> of IoT Devices from which to choose. I wanted something with a little more horsepower than a standard IoT <em>device</em> and I just didn&rsquo;t feel like futzing with the Pis. So you&rsquo;re stuck hearing about the 520 again. </p>
+<h2 id="setting-up-for-data-ingestion-and-analysis">Setting up for Data Ingestion and Analysis</h2>
+<p>Wait, we&rsquo;re going to do data ingestion and analysis on an ARTIK-520? Shouldn&rsquo;t we be using a server? See above. Plus, wouldn&rsquo;t it be slightly interesting to do some data ingestion and analysis at the hub, before the data is sent on to the backend? Maybe. So that&rsquo;s what we&rsquo;re going to do. </p>
+<p>As the title of this post suggests, we&rsquo;re going to use InfluxDB from <a href="https://www.influxdata.com/">Influx Data</a>. It&rsquo;s open source, and free if you want to try it out too. Feel free to follow along. Why InfluxDB? Well, I wanted to try it out, and it claims to be the fastest growing Time Series database around, plus I heard it was pretty easy to get up and running so I thought I&rsquo;d give it a go. </p>
+<p>First, I&rsquo;ll say that getting it all up and running was absolutely dead simple. Like your VP of Marketing can do it (<strong>Inside Joke Alert:</strong>  Back in my Sun days, building demos that were installable and runnable by my Marketing VP was always my metric. He loved it because he could run them!) I downloaded all the components and started them up.  There are a bunch of moving parts here, so you need to make sure to get them all. There&rsquo;s <strong>InfluxDB</strong>, which is (obviously) the database portion. Sort of key to the whole thing. There&rsquo;s also <strong>Telegraf</strong>, which is a data ingestion engine. Then there&rsquo;s <strong>Chronograf</strong>, which is a really nifty visualization and analysis tool. Finally there&rsquo;s <strong>Kapacitor</strong> which handles the whole &ldquo;Action&rdquo; part for you. </p>
+<p>I was able to download and install all the parts in about 5 minutes &ndash; maybe less &ndash; and get the whole thing up and running. I even built my first dashboard to monitor the CPU and Memory usage of the ARTIK-520 in about a minute and a half. </p>
+<p><img src="/posts/category/database/images/Safari031.jpg" alt="Influx Dashboard Image"></p>
+<p>Which actually looks really good. Especially the memory usage graph. So I probably won&rsquo;t overwhelm the memory with this &ndash; and let&rsquo;s keep in mind that I&rsquo;m still running this ARTIK-520 as an <a href="/posts/category/iot/iot-hardware/openhab-server-artik-520/">OpenHAB server</a> controlling my house. </p>
+<p>But I really want to use this for monitoring some actual sensor data, not just the machine itself. It just so happens that I have a sensor project here on my desk, and it is actively collecting data and logging it. Logging it elsewhere, but that&rsquo;s about to change. </p>
+<h2 id="logging-live-data">Logging Live Data</h2>
+<p>The sensor I have already set up and running is a one I wrote about <a href="/posts/category/iot/playing-with-distance/">recently</a>. It&rsquo;s hooked to a <a href="http://particle.io/">Particle.io</a> Photon and is measuring the amount of &lsquo;stuff&rsquo; in a box pretty much continuously (1 reading every second). I created a database for this &ndash; &lsquo;iotdata&rsquo; aren&rsquo;t I original? &ndash; and tested posting to it from the command line as per the (excellent) <a href="https://docs.influxdata.com/influxdb/v1.2/guides/writing_data/">documentation</a>. Everything seemed to go as planned. Now to get live data streaming in! </p>
+<p>First I had to poke a hole in my firewall to be able to get to to my ARTIK-520 box from the outside world. It seems crazy that the Particle is on one side of my desk and the ARTIK-520 is on the other and my data has to make a trip around the planet to get there, but that&rsquo;s how the world works sometimes.</p>
+<p>Particle has &lsquo;Webhooks&rsquo; that you can set up to post to other services. They have some pre-defined ones for Google Apps, etc. but none for InfluxDB. They need to fix that, but that&rsquo;s another post. I tried to define my own Webhook, but their web hooks insist on posting everything as </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">content</span><span style="color:#f92672">-</span><span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">application</span><span style="color:#f92672">/</span><span style="color:#a6e22e">x</span><span style="color:#f92672">-</span><span style="color:#a6e22e">www</span><span style="color:#f92672">-</span><span style="color:#a6e22e">form</span><span style="color:#f92672">-</span><span style="color:#a6e22e">urlencoded</span>
+</code></pre></div><p> And that&rsquo;s not what is expected, and it turns out not to work. Not to be deterred, I managed to come up with another solution. The Particle device will post its data directly to InlfuxDB. Who needs a middleman! It takes slightly more code, but it&rsquo;s not bad. Here&rsquo;s what I had to add to my Particle code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;HttpClient.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>...
+HttpClient http;
+http_header_t headers[] <span style="color:#f92672">=</span> {
+  { <span style="color:#e6db74">&#34;Accept&#34;</span> , <span style="color:#e6db74">&#34;*/*&#34;</span>},
+  { <span style="color:#e6db74">&#34;User-agent&#34;</span>, <span style="color:#e6db74">&#34;Particle HttpClient&#34;</span>},
+  { NULL, NULL } <span style="color:#75715e">// NOTE: Always terminate headers will NULL
+</span><span style="color:#75715e"></span>};
+http_request_t request;
+http_response_t response;
+...
+<span style="color:#66d9ef">void</span> loop(){
+...
+  request.body <span style="color:#f92672">=</span> String<span style="color:#f92672">::</span>format(<span style="color:#e6db74">&#34;volume_reading value=%d&#34;</span>, getRangeReading());
+  http.post(request, response, headers);
+...
+} 
+</code></pre></div><p>That&rsquo;s all it took! You&rsquo;ll notice that I&rsquo;m not using any security on this setup. <strong>I do not recommend doing it this way</strong>. At the very least you should be using a username/password for authentication to the database, and you should probably also being using SSL. But I don&rsquo;t have an SSL cert for my ARTIK-520, and this was just an exercise on my part and not a real deployment. Plus I poked non-standard holes in my firewall, and don&rsquo;t really think that anyone&rsquo;s going to come knocking (and if they do, I&rsquo;ll see it instantly and can shut them out, so don&rsquo;t get any ideas).</p>
+<p>And here&rsquo;s what my dashboard now looks like:</p>
+<p><img src="/posts/category/database/images/Safari033.jpg" alt="Larger Influx Dashboard"></p>
+<p>A nice <strong>real time</strong> graph of the incoming data from my sensor. Fast and easy to set up! </p>
+<h2 id="make-it-actionable">Make It Actionable</h2>
+<p>So far, we&rsquo;ve set up Telegraf for data ingestion, InfluxDB, the actual database, and Chronograf which gives us the cool dashboards of real-time data from our sensor(s).  But again, data is all cute and fun but it&rsquo;s the making it <em>actionable</em> that is key. And that&rsquo;s where Kapacitor comes in. So I&rsquo;m going to set that up next so that I can get alerts and notifications when the volume of &lsquo;stuff&rsquo; in my box gets too high, or too low. </p>
+<p>Kapacitor, sadly, doesn&rsquo;t have a slick UI front end that lends itself easily to seeing your results in a visually satisfying way. But it&rsquo;s no less powerful. You just have to write your &lsquo;actions&rsquo; in TICKScript and then deploy them. So dive into the documentation and get going already!</p>
+<p>The syntax for TICK Scripts is a bit fiddly, so really do make sure that you&rsquo;ve read the documentation on this one. Seriously. I was able, in about 10 minutes, to write 2 TICK Scripts to alert when the volume measurement got below 50 (which is pretty darned full!) or when it got above 210 (which is essentially empty).  For now, those alerts are simply logged to a file, but I could just as easily turned them around as a POST to my server to do a browser alert or something else. </p>
+<p>I&rsquo;d love to see a fancy front-end on Kapacitor that makes writing and deploying TICK Scripts quick and easy, and that allows you do to alerts and things on your Chronograf Dashboards, but for now I&rsquo;m pretty happy with just sending alerts off to other things. </p>
+<p>If I wanted to, I could send those alerts <strong>back</strong> to my Photon &ndash; via a POST to the Particle Cloud API &ndash; to have the Photon take an action of its own as well. Maybe if I had a pneumatic &lsquo;pusher&rsquo; that would shove everything out of the box I&rsquo;d do just that. </p>
+<h2 id="your-turn">Your Turn</h2>
+<p>Hopefully I&rsquo;ve gotten you far enough down the road that you can start your own InfluxDB based project for your IoT data. If you do, I&rsquo;d love to hear about it! </p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/iot-hardware/running-influxdb-on-an-artik-520.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-hardware/influxdb-on-artik-520-redux/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>InfluxDB on ARTIK-520 Redux</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/general/how-nokia-has-blown-the-withings-acquisition/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>How Nokia has Blown the Withings Acquisition</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#not-the-artik-520-again">Not the ARTIK-520 Again!</a></li>
+    <li><a href="#setting-up-for-data-ingestion-and-analysis">Setting up for Data Ingestion and Analysis</a></li>
+    <li><a href="#logging-live-data">Logging Live Data</a></li>
+    <li><a href="#make-it-actionable">Make It Actionable</a></li>
+    <li><a href="#your-turn">Your Turn</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>All About IoT</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  
+  
+
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/quickly-connect-an-argon-iot-device-to-questdb/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/rawPower.svg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Quickly Connect an Argon IoT Device to QuestDB</h5>
+
+        <p class="card-text post-summary">I&rsquo;m back to Particle.io again. I saw that they were having a 30% off sale on the new Argon and some developer kits, so I had to jump on it, since I haven&rsquo;t gotten any new Particle hardware in years. So, what follows is a complete guide to connecting one of these kits to QuestDB in order to store the data, and then building a dashboard on top of it with Grafana .</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 8, 2020</span>
+        <a
+        href="/posts/category/iot/iot-hardware/quickly-connect-an-argon-iot-device-to-questdb/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/this-whole-thing-stinks/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/images/singing-poop-emoji-sm.png>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">This Whole Thing Stinks!</h5>
+
+        <p class="card-text post-summary">First of all, don&rsquo;t ask I have no idea where this idea came from, it just happened. I keep saying &ldquo;I&rsquo;m not especially proud of this&rdquo; but in reality? I sort of am because it&rsquo;s funny as shit (pun intended). Some projects came across my twitter feed that included (I shit you not) a 3-D printable model of the 💩 emoji. I remember nothing else about that project, but you&rsquo;d better believe that I went straight for that STL file!</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">March 11, 2020</span>
+        <a
+        href="/posts/category/iot/this-whole-thing-stinks/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/sensing-with-the-things-network/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/images/TheThings.jpg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Sensing with The Things Network</h5>
+
+        <p class="card-text post-summary">There are many ways to connect your sensors to the network in the IoT. For short-range connections, there is Bluetooth LE, or Zigbee, or 802.15.4, or ZWave. For longer distances (though still fairly short) there’s always WiFi. But when you need longer distances, sometimes very long distances, there’s LoRaWAN. It’s a sub-gigahertz set of frequencies that are available for small bits of data. These are typically only a few bytes of data but can be sent over much longer distances — up to 2 km or more in some instances!</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">October 10, 2019</span>
+        <a
+        href="/posts/category/iot/sensing-with-the-things-network/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/reving-the-demo-hardware/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/IMG_5478.jpeg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Rev&#39;ing the Demo Hardware</h5>
+
+        <p class="card-text post-summary">If you’ve been reading me for any length of time at all, you’ll know that I build lots of little hardware projects. What better way to highlight the IoT capabilities of InfluxDB than to build hardware that writes data to it constantly! But some of my hardware demos have been getting old, and some of them have been getting abused, so I decided it was time to revamp them with some new hardware, I’m even going to make them fully wireless by adding LiPo batteries so they can go mobile during presentations and demos!</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">June 5, 2019</span>
+        <a
+        href="/posts/category/iot/iot-hardware/reving-the-demo-hardware/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/building-an-influxdb-iot-edge-data-collection-device/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/IMG_4086.png>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Building an InfluxDB IoT Edge Data Collection Device</h5>
+
+        <p class="card-text post-summary">I’ve been saying I was going to write this whole project up for some time now but it has been such a daunting task that I’ve been putting it off, starting and stopping, and generally not getting it done for a few months. Finally, I have it! This is both a hardware build and a software build, and there are a lot of moving parts, so be prepared!
+Overview I wanted to build a demonstration system that would show off the capabilities of using InfluxData — the entire TICK Stack — on the extreme edge of an IoT Architecture.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 20, 2018</span>
+        <a
+        href="/posts/category/iot/iot-hardware/building-an-influxdb-iot-edge-data-collection-device/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-software/programming-the-artik-0-iot-devices/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-software/images/bazaar493520_2.jpg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Programming the ARTIK-0 IoT Devices</h5>
+
+        <p class="card-text post-summary">If you’ve read this blog much at all you’ll have noticed that I’ve been a fairly big fan of the ARTIK line of IoT boards (see here, here, here, here, here, here , here and here) but I really need to clarify that a bit now. I love my ARTIK-520 board. It runs the entire InfluxData stack nicely and is a solid, reliable place to deploy IoT-Edge software. I really like it.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 1, 2018</span>
+        <a
+        href="/posts/category/iot/iot-software/programming-the-artik-0-iot-devices/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-software/heres-why-im-giving-up-on-mynewt-for-now/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-software/logo.png>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Here&#39;s Why I&#39;m giving up on MyNewt (for now)</h5>
+
+        <p class="card-text post-summary">With all these sensors and platforms lying around, I wanted to just pick one and build a quick sensor demo. It should be easy, right?
+The basic idea As you may (or may not) know, I spent a lot of time with the Apache MyNewt project a year or so ago. It has enormous potential. It’s small, fast, and very lightweight. I even wrote a tutorial on developing an app with MyNewt.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">April 4, 2018</span>
+        <a
+        href="/posts/category/iot/iot-software/heres-why-im-giving-up-on-mynewt-for-now/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/SafariScreenSnapz005-1.png>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Building An IoT Gateway Device for local Alerting and Data Downsampling</h5>
+
+        <p class="card-text post-summary">There are all sorts of ways to architect your IoT Deployment, and what’s right for one enterprise will not necessarily be right for another. Depending on the size and complexity of your IoT project , there can be, of course, a lot of components. One of the more universal architectures is to deploy sensor hubs or gateway devices to collect data from a number of sensor nodes and then forward that data on to an upstream data collection system for the enterprise.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">December 18, 2017</span>
+        <a
+        href="/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/getting-started-with-the-renesas-iot-fast-prototyping-kit/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/Safari041.jpg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Getting Started with the Renesas IoT Fast Prototyping Kit</h5>
+
+        <p class="card-text post-summary">I&rsquo;ve been meaning to get to this for a couple of weeks, and have been waylaid by a bunch of other things that kept popping up, but I&rsquo;ve been working away with these, and thought I&rsquo;d post at least an initial post about these kits. Renesas was kind enough to give me both theS3 IoT Fast Prototyping Kit and the S7 Starter Kit, both of which are really really nice boards for doing IoT prototyping.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 25, 2017</span>
+        <a
+        href="/posts/category/iot/iot-hardware/getting-started-with-the-renesas-iot-fast-prototyping-kit/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/influxdb-on-artik-520-redux/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/influxdata-social-share-image-square-1.jpg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">InfluxDB on ARTIK-520 Redux</h5>
+
+        <p class="card-text post-summary">Last week I wrote a piece on installing and running the InfluxDB time series database, ingestion, dashboard and action packages on your ARTIK-520, but I need to update that post, and it&rsquo;s a bit more than just a few edits. Influx Data supplies the Linux binaries as packages for most of the major distributions, but the ARM distribution is just as a binary, with no package installation scripts, etc. I thought I&rsquo;d show you how (and why) I fixed that for my ARTIK-520.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 20, 2017</span>
+        <a
+        href="/posts/category/iot/iot-hardware/influxdb-on-artik-520-redux/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/iot-hardware/running-influxdb-on-an-artik-520/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/iot-hardware/images/open-data-1_0.png>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Running InfluxDB on an ARTIK-520</h5>
+
+        <p class="card-text post-summary">Let&rsquo;s face it, the IoT is about data. I said it just a few weeks ago. It&rsquo;s about collecting data. Lots of data. But it&rsquo;s actually about a lot more than just collecting data. Simply collecting data doesn&rsquo;t really get you anywhere if all you do is collect it. To be useful, IoT data has to be relevant, accurate, and actionable. That last part is the key, really. Actionable data. In order to make your data actionable, you have to be able to analyze it, in real time preferably.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 14, 2017</span>
+        <a
+        href="/posts/category/iot/iot-hardware/running-influxdb-on-an-artik-520/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/category/iot/you-havent-seen-big-data-yet/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        
+        
+          
+          
+          
+          
+        <img class="card-img-top" src=https://davidgs.com/posts/category/iot/images/JuvenileGraySquirrel_ChristineHaines.jpg>
+
+        
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">You Haven&#39;t Seen Big Data Yet</h5>
+
+        <p class="card-text post-summary">Yeah, I know, &ldquo;Big Data&rdquo; as a buzz-word is so 5 minutes ago. The tech world is chronically ADD and prone to being distracted by the next shiny object (OOh! Look, IoT!, Wait, AI! SQUIRREL!!) But stay with me on this. It&rsquo;s all connected. I&rsquo;ve been saying since at least 2005 (back when Big Data was all the rage) that you haven&rsquo;t seen truly big data until the IoT truly gets going in full force.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">June 23, 2017</span>
+        <a
+        href="/posts/category/iot/you-havent-seen-big-data-yet/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+
+  </a>
+</div>
+
+      
+    </div>
+    <div class="paginator">
+      
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/posts/category/iot/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/posts/category/iot/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/category/iot/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/category/iot/page/3/">3</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/category/iot/page/4/">4</a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/category/iot/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/category/iot/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+      
+       
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+    <script src="/js/list.js"></script>
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT, Raspberry Pi on David G. Simmons</title>
+    <link>https://davidgs.com/tags/iot-raspberry-pi/</link>
+    <description>Recent content in IoT, Raspberry Pi on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/iot-raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessing your Raspberry Pi Zero W</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/accessing-your-raspberry-pi-zero-w/</link>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/accessing-your-raspberry-pi-zero-w/</guid>
+      <description>If you&amp;rsquo;ve been lucky enough to get your hands on a Raspberry Pi Zero W, then you might enjoy this. If you&amp;rsquo;re still waiting for one, bookmark this. Unless you happen to have extra HDMI monitors, keyboards and mice lying around. I don&amp;rsquo;t, so configuring mine was a pain in the ass. I&amp;rsquo;ve solved that pain for you, so read on.
+First, of course, you&amp;rsquo;ll need to download and install the latest Raspian-OS.</description>
+    </item>
+    
+    <item>
+      <title>Using Raspberry Pi for a Dedicated Pandora Player</title>
+      <link>https://davidgs.com/posts/category/general/using-raspberry-pi-for-a-dedicated-pandora-player/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/using-raspberry-pi-for-a-dedicated-pandora-player/</guid>
+      <description>Let’s call it a Pandora Pi, shall we? Anyway, I have a (non-technical) friend that was always envious of the music setup I have in my house. I have a bunch of Bose Series III speakers set up around the house, connected to Airport Express Basestations so that I can broadcast music throughout the house. There’s always music playing around here, usually throughout the whole house — kitchen, living room, office, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

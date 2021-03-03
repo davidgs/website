@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Just How Fast Is Faster?</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Just How Fast Is Faster?" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/general/images/Azul.jpg&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/general/images/Azul.jpg);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>March 6, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>Just How Fast Is Faster?</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>After I installed and tried the <a href="https://www.azul.com/products/zulu-embedded/">Zulu Embedded JVM</a> on my ARTIK-520 <a href="posts/category/general/making-artik-5-iot-gateway-kura">this morning</a> I noticed that it <strong>felt</strong> faster. It <strong>seemed</strong> faster. But was it really faster? And if so, how much faster? So I went looking for some Java Benchmark tests to run. </p>
+<p>I chose the <a href="http://www.dacapobench.org">DaCapo Benchmark</a> for this. Why? Because google, that&rsquo;s why. Here&rsquo;s what the DaCapo Benchmark says about itself*:</p>
+<blockquote>
+<p>This benchmark suite is intended as a tool for Java benchmarking by the programming language, memory management and computer architecture communities. It consists of a set of <em>open source</em>, real world applications with non-trivial memory loads. The initial release of the suite was the culmination of over five years work at eight institutions, as part of the  DaCapo research project(<a href="http://www.dacapo-group.org/),">http://www.dacapo-group.org/),</a> which was funded by a National Science Foundation ITR Grant, CCR-0085792. Three years of development have gone into the 2009 release. This work has been funded by the ANU, the Australian Research Council and a generous donation from Intel.</p>
+</blockquote>
+<p>Works for me. My mom was a world-famous Benchmark expert for decades. I&rsquo;m not. So this is what I chose. Are there better benchmark suites out there? Probably. Do I care? Not so much.</p>
+<p>Here are the specific benchmark tests included in this suite. You&rsquo;ll notice that not all of them are represented below. While they all completed successfully on the Mac, I have only included the ones that succeeded successfully on at least one of the embedded JVMs. </p>
+<p>The DaCapo-9.12-bach benchmark suite, released in 2009, consists of the following benchmarks:</p>
+<ul>
+<li>avrora</li>
+<li>batik</li>
+<li>eclipse</li>
+<li>fop</li>
+<li>h2</li>
+<li>jython</li>
+<li>luindex</li>
+<li>lusearch</li>
+<li>pmd</li>
+<li>sunflow</li>
+<li>tomcat</li>
+<li>tradebeans</li>
+<li>tradesoap</li>
+<li>xalan</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>avrora</td>
+<td>simulates a number of programs run on a grid of AVR microcontrollers</td>
+</tr>
+<tr>
+<td>batik</td>
+<td>produces a number of Scalable Vector Graphics (SVG) images based on the unit tests in Apache Batik</td>
+</tr>
+<tr>
+<td>eclipse</td>
+<td>executes some of the (non-gui) jdt performance tests for the Eclipse IDE</td>
+</tr>
+<tr>
+<td>fop</td>
+<td>takes an XSL-FO file, parses it and formats it, generating a PDF file.</td>
+</tr>
+<tr>
+<td>h2</td>
+<td>executes a JDBCbench-like in-memory benchmark, executing a number of transactions against a model of a banking application, replacing the hsqldb benchmark</td>
+</tr>
+<tr>
+<td>jython</td>
+<td>inteprets a the pybench Python benchmark</td>
+</tr>
+<tr>
+<td>luindex</td>
+<td>Uses lucene to indexes a set of documents; the works of Shakespeare and the King James Bible</td>
+</tr>
+<tr>
+<td>lusearch</td>
+<td>Uses lucene to do a text search of keywords over a corpus of data comprising the works of Shakespeare and the King James Bible</td>
+</tr>
+<tr>
+<td>pmd</td>
+<td>analyzes a set of Java classes for a range of source code problems</td>
+</tr>
+<tr>
+<td>sunflow</td>
+<td>renders a set of images using ray tracing</td>
+</tr>
+<tr>
+<td>tomcat</td>
+<td>runs a set of queries against a Tomcat server retrieving and verifying the resulting webpages</td>
+</tr>
+<tr>
+<td>tradebeans</td>
+<td>runs the daytrader benchmark via a Jave Beans to a GERONIMO backend with an in memory h2 as the underlying database</td>
+</tr>
+<tr>
+<td>tradesoap</td>
+<td>runs the daytrader benchmark via a SOAP to a GERONIMO backend with in memory h2 as the underlying database</td>
+</tr>
+<tr>
+<td>xalan</td>
+<td>transforms XML documents into HTML</td>
+</tr>
+</tbody>
+</table>
+<p>So here&rsquo;s what I found.</p>
+<p>Yeah, the Zulu JVM is faster. And it&rsquo;s not just a little bit faster. It&rsquo;s a <strong>LOT</strong> faster. I mean a whole lot. So much so that I decided to run the same Benchmark suite on my MacBook Pro just for grins. Guess what? In one of the tests, Zulu beat the JVM on my Mac. Whiskey. Tango. Foxtrot. But yes, the numbers don&rsquo;t lie.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Test</strong></th>
+<th><strong>OpenJDK</strong></th>
+<th><strong>Zulu</strong></th>
+<th><strong>Mac OS X</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>avrora</strong></td>
+<td>588264</td>
+<td>44963</td>
+<td>6137</td>
+</tr>
+<tr>
+<td><strong>xalan</strong></td>
+<td>438577</td>
+<td>41963</td>
+<td>50066</td>
+</tr>
+<tr>
+<td><strong>tradesoap</strong></td>
+<td>FAIL</td>
+<td>247835</td>
+<td>51650</td>
+</tr>
+<tr>
+<td><strong>tradebeans</strong></td>
+<td>FAIL</td>
+<td>85343</td>
+<td>13105</td>
+</tr>
+<tr>
+<td><strong>sunflow</strong></td>
+<td>218045</td>
+<td>69992</td>
+<td>5405</td>
+</tr>
+<tr>
+<td><strong>pmd</strong></td>
+<td>135382</td>
+<td>24268</td>
+<td>4333</td>
+</tr>
+<tr>
+<td><strong>lusearch</strong></td>
+<td>459989</td>
+<td>39134</td>
+<td>5035</td>
+</tr>
+<tr>
+<td><strong>luindex</strong></td>
+<td>230904</td>
+<td>11399</td>
+<td>2305</td>
+</tr>
+<tr>
+<td><strong>fop</strong></td>
+<td>[103144</td>
+<td>15233</td>
+<td>3852</td>
+</tr>
+<tr>
+<td><strong>jython</strong></td>
+<td>1204207</td>
+<td>59300</td>
+<td>4150</td>
+</tr>
+</tbody>
+</table>
+<p>So Zulu beats Mac on the xalan benchmark. Astonishing. And the OpenJDK for ARMv7 is really sort of crap. On the tests it was able to complete it lagged far, <strong>far</strong> behind the Zulu JVM. The failures in the tradesoap and tradebeans tests were outOfMemeoryException failures, so the Zulu JVM is not just faster, but it&rsquo;s a lot more memory efficient. And on an embedded system, a memory-efficient JVM is what you really want, right?</p>
+<p>Here&rsquo;s what those results look like in pretty chart form:</p>
+<p><img src="/posts/category/general/images/Numbers002.jpg" alt="Numbers002" title="Numbers002.jpg"></p>
+<p>Ridiculous, right? Yes, the Mac numbers are so small they barely register almost everywhere at this scale, but the Zulu numbers are quite impressive when compared to the OpenJDK numbers. </p>
+<p>So not only does the Zulu JVM <strong>feel</strong> faster, it actually <strong>is</strong> faster. And by a <strong>LOT</strong>. I&rsquo;d say if you&rsquo;re planning to deploy something on the ARTIK-520, and it&rsquo;s written in Java, and you want it to perform well, you&rsquo;d be well-served to shell out the money for the Zulu JVM. You&rsquo;ll be a lot happier. </p>
+<p>* Blackburn, S. M., Garner, R., Hoffman, C., Khan, A. M., McKinley, K. S., Bentzur, R., Diwan, A., Feinberg, D., Frampton, D., Guyer, S. Z., Hirzel, M., Hosking, A., Jump, M., Lee, H., Moss, J. E. B., Phansalkar, A., Stefanovic, D., VanDrunen, T., von Dincklage, D., and Wiedermann, B. <strong>The DaCapo Benchmarks: Java Benchmarking Development and Analysis</strong>, <em>OOPSLA &lsquo;06: Proceedings of the 21st annual ACM SIGPLAN conference on Object-Oriented Programing, Systems, Languages, and Applications</em>, (Portland, OR, USA, October 22-26, 2006) (<a href="http://portal.acm.org/citation.cfm?doid=1167473.1167488">pdf</a>, <a href="http://www.dacapobench.org/cite.html">BibTeX</a>).</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/general/just-how-fast-is-faster.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/general/how-to-save-your-artik-520-backup/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>How To Save (Backup or clone) Your ARTIK-520</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/iot/make-your-artik-520-scream/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Make your ARTIK-520 Scream</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

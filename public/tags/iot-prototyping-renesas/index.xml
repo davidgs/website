@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT, Prototyping, Renesas on David G. Simmons</title>
+    <link>https://davidgs.com/tags/iot-prototyping-renesas/</link>
+    <description>Recent content in IoT, Prototyping, Renesas on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/iot-prototyping-renesas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with the Renesas IoT Fast Prototyping Kit</title>
+      <link>https://davidgs.com/posts/category/iot/iot-hardware/getting-started-with-the-renesas-iot-fast-prototyping-kit/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/iot-hardware/getting-started-with-the-renesas-iot-fast-prototyping-kit/</guid>
+      <description>I&amp;rsquo;ve been meaning to get to this for a couple of weeks, and have been waylaid by a bunch of other things that kept popping up, but I&amp;rsquo;ve been working away with these, and thought I&amp;rsquo;d post at least an initial post about these kits. Renesas was kind enough to give me both theS3 IoT Fast Prototyping Kit and the S7 Starter Kit, both of which are really really nice boards for doing IoT prototyping.</description>
+    </item>
+    
+  </channel>
+</rss>

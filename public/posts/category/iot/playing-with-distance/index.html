@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Playing With Distance</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Playing With Distance" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/images/3317-03.jpg&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/images/3317-03.jpg);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>June 1, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>Playing With Distance</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>I&rsquo;ve been playing with a bunch of different sensors lately (see <a href="/posts/category/iot/iot-software/building-an-app-with-apache-mynewt/">here</a>) so I thought I&rsquo;d do another little write-up of it. I dug my <a href="https://particle.io/">Particle</a> Photon out to play with after being inspired at an <a href="https://www.meetup.com/NC-RIoT-Regional-Internet-of-Things/">NC RIoT</a> event a few weeks ago and it had been a <a href="/posts/category/iot/iot-hardware/new-hardware/">long time</a> since I&rsquo;d had it out. I&rsquo;m not going to share the exact problem I was trying to solve with this little application, as it&rsquo;s still a work in progress and may very well end up being a product soon, but I&rsquo;ll tell you how I&rsquo;m doing it. </p>
+<h2 id="ultrasonics">Ultrasonics</h2>
+<p>I started off using a <a href="http://www.maxbotix.com">MaxBotics</a> Ultrasonic sensor, but it was very unsatisfactory as It was inside a box, and ultrasonic sensors in confined spaces are really problematic. Sound waves bounce around a lot and cause all sorts of side-effects that are difficult to compensate for. Plus they&rsquo;re just not <strong>that</strong> accurate. Ultrasonics just wouldn&rsquo;t work for my application. </p>
+<p><img src="/posts/category/iot-iot-software/images/Beam-Pattern-MB1034.gif" alt="Beam Pattern MB1034"></p>
+<p>You&rsquo;ll notice that the &lsquo;cone&rsquo; expands basically as a square. at 6&quot; distance, it is 6&quot; wide. If your box is less than 6&quot; wide, you&rsquo;re already getting a reflection, and a reading of a distance measurement, which is not what you want. </p>
+<h2 id="let-there-be-invisble-light">Let There Be (Invisble) Light!</h2>
+<p>Then I found this little sensor. The <a href="https://www.adafruit.com/product/3317">Adafruit VL530L0X</a> Time of Flight Sensor. The board itself is less than 1 square inch, which is really nice. It&rsquo;s also perfectly flat which, for an application that wants to leave the entire volume of the box unoccupied, is also extremely nice. But the best part is that it has its own self-contained laser and measures time-of-flight of the light to the target. The chip, which is about the size of a grain of rice, fires an invisible laser and measures the return time to determine distance. The fact that it can determine this time over a 50mm distance is really remarkable. Being light and not sound also means that it is a very focussed measurement without an ever-increasing cone of reflection.  Of course this means placement of the sensor is fairly important. </p>
+<p><img src="/posts/category/iot-iot-software/images/Bounce3.png" alt="Bounce3"></p>
+<p>This obviously won&rsquo;t work. The sensor must be placed directly over the measurement surface, and as flat as possible. </p>
+<p><img src="/posts/category/iot-iot-software/images/Bounce2.png" alt="Bounce2"></p>
+<p>Interestingly enough with this sensor the measurement surface doesn&rsquo;t have to be white, or even all that reflective. I&rsquo;ve tested results with all sorts of different materials and colors (black, red, white, paper, cardboard, clear plastic, etc.) and the results are astonishingly good. My tests of average distance and variance don&rsquo;t seem to change no matter what material I&rsquo;m measuring against. That&rsquo;s a good thing!</p>
+<h2 id="calibration-and-reading">Calibration and Reading</h2>
+<p>There is a certain amount of jitter in the readings, so in order to smooth the results, I first calibrate an empty reading average, and the average variance in readings:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#define SAMPLE_SIZE 100 </span><span style="color:#75715e">// sample size for calibration of empty box
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define AV_SAMPLE 10 </span><span style="color:#75715e">// sample size for each reading averaging
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> variance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">int</span> empty <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">calibrate</span>(<span style="color:#66d9ef">void</span>) {
+  empty <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">int</span> prevVal <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">int</span> val <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">while</span>(x <span style="color:#f92672">&lt;</span> SAMPLE_SIZE){
+    <span style="color:#66d9ef">if</span> (measure.RangeStatus <span style="color:#f92672">!=</span> <span style="color:#ae81ff">4</span>) {
+      prevVal <span style="color:#f92672">=</span> val;
+      val <span style="color:#f92672">=</span> measure.RangeMilliMeter;
+      variance <span style="color:#f92672">+=</span> abs(val<span style="color:#f92672">-</span>prevVal);
+      empty <span style="color:#f92672">+=</span> val;
+    } <span style="color:#66d9ef">else</span> {
+      mailStat <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mailbox Sensor Error!&#34;</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    }
+    x<span style="color:#f92672">++</span>;
+    delay(SAMPLE_SIZE<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>);
+  }
+  empty <span style="color:#f92672">=</span> empty<span style="color:#f92672">/</span>SAMPLE_SIZE;
+  variance <span style="color:#f92672">=</span> variance<span style="color:#f92672">/</span>SAMPLE_SIZE;
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>I found that averaging over about 100 samples gives me a good baseline measurement, with about a 2mm &lsquo;jitter&rsquo; variance. In a 200mm box, that&rsquo;s a 2% variance, which is really quite good and completely acceptable. When I&rsquo;m actually doing the realtime measurements, I need to take a bunch of measurements and average them as well because of this jitter. Not as many, of course.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getRangeReading</span>(<span style="color:#66d9ef">void</span>){
+  <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">int</span> av <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">while</span>(count <span style="color:#f92672">&lt;</span> AV_SAMPLE){
+    lox.rangingTest(<span style="color:#f92672">&amp;</span>measure, false);
+    <span style="color:#66d9ef">if</span> (measure.RangeStatus <span style="color:#f92672">!=</span> <span style="color:#ae81ff">4</span>) {
+      av <span style="color:#f92672">+=</span> measure.RangeMilliMeter;
+    } <span style="color:#66d9ef">else</span> {
+      mailStat <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Mailbox Sensor Error!&#34;</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    }
+    count<span style="color:#f92672">++</span>;
+    delay(AV_SAMPLE);
+  }
+  av <span style="color:#f92672">=</span> av<span style="color:#f92672">/</span>AV_SAMPLE;
+  <span style="color:#66d9ef">return</span> av;
+}
+</code></pre></div><p>I haven&rsquo;t needed to calculate the variance in these shorter samples as the variance seems to average out the same as the overall variance calculated during the calibration routine. </p>
+<p>I did find that I got a fair amount of false-positive readings if I just compared a reading to the &lsquo;empty&rsquo; value ± the calculated variance, so for stability I simply added 2 to the average variance &ndash; I arrived at that number by trial and error, so it&rsquo;s not scientific or anything &ndash; and any deviation from variance ± 2 I treat as an &lsquo;event&rsquo;. So far, that&rsquo;s been highly accurate over a wide variety of tests with a large number of measurements. </p>
+<h2 id="getting-thinner">Getting Thinner</h2>
+<p>I wanted to be able to measure the placement of even a single business card in this box. A business card is, of course, less than 1mm thick, but it&rsquo;s still possible. I simply made the floor of the box slightly corrugated, and &lsquo;shoot&rsquo; to the bottom of one of the corrugations. </p>
+<p><img src="/posts/category/iot-iot-software/images/Bounce5.png" alt="Bounce5"></p>
+<p>They are about 3mm deep, so a single business card placed on the surface registers quite well. Problem solved!</p>
+<p>So that&rsquo;s my distance measurement exercise for the day. I hope you found it useful!</p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/playing-with-distance.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/you-havent-seen-big-data-yet/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>You Haven&#39;t Seen Big Data Yet</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/work/ncriot-meetup/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>NCRIoT Meetup</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ultrasonics">Ultrasonics</a></li>
+    <li><a href="#let-there-be-invisble-light">Let There Be (Invisble) Light!</a></li>
+    <li><a href="#calibration-and-reading">Calibration and Reading</a></li>
+    <li><a href="#getting-thinner">Getting Thinner</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

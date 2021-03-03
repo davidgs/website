@@ -10,7 +10,7 @@ hero: images/breadboard.jpg
 
 Just for future reference, here’s the development board that sits on my desk:
 
-![Tot 1 2](/posts/category/iot-iot-software/images/Tot-1-2.png)
+![Tot 1 2](/posts/category/iot/images/Tot-1-2.png)
 
 What’s on it? Well, here’s the list:
 

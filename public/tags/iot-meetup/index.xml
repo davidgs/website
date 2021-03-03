@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT, Meetup on David G. Simmons</title>
+    <link>https://davidgs.com/tags/iot-meetup/</link>
+    <description>Recent content in IoT, Meetup on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/iot-meetup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NCRIoT Meetup</title>
+      <link>https://davidgs.com/posts/work/ncriot-meetup/</link>
+      <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/work/ncriot-meetup/</guid>
+      <description>If you follow me on Twitter, you&amp;rsquo;ll already know that I was at the NCRIoT IoT Meetup yesterday at the NASCAR Hall of Fame in Charlotte, NC. You may not know what NC RIoT is. Hell, until recently, I didn&amp;rsquo;t either, which is a crime really because it&amp;rsquo;s an amazing group of IoT fanatics doing some really cool stuff with IoT. I even met a guy who does as many crazy things with IoT as I do &amp;ndash; you should follow @LogicalDan on twitter, and tweet at him in case he&amp;rsquo;s wearing his shirt that lights up when you tweet at him.</description>
+    </item>
+    
+  </channel>
+</rss>

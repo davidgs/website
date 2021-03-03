@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dashboard, Database, IoT, Node-Red, QuestDB on David G. Simmons</title>
+    <link>https://davidgs.com/tags/dashboard-database-iot-node-red-questdb/</link>
+    <description>Recent content in Dashboard, Database, IoT, Node-Red, QuestDB on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/dashboard-database-iot-node-red-questdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A QuestDB Dashboard with Node-Red</title>
+      <link>https://davidgs.com/posts/category/database/a-questdb-dashboard-with-node-red/</link>
+      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/database/a-questdb-dashboard-with-node-red/</guid>
+      <description>This is really a follow-on to my post from last week where I connected an Arduino with a temperature and humidity sensor to QuestDB.
+It&amp;rsquo;s one thing to send data to your database, but being able to visualize that data is the next logical step. So let&amp;rsquo;s dive right in to doing that.
+QuestDB is rather new, and hence we haven&amp;rsquo;t completed our Grafana Data Source Plugin yet, so I wanted to make a quick dashboard to show the incoming temperature/humidity data (and you&amp;rsquo;ll see just how awful the sensor really is).</description>
+    </item>
+    
+  </channel>
+</rss>

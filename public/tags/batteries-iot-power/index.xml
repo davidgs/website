@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Batteries, IoT, power on David G. Simmons</title>
+    <link>https://davidgs.com/tags/batteries-iot-power/</link>
+    <description>Recent content in Batteries, IoT, power on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/batteries-iot-power/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Minor IoT Calculations</title>
+      <link>https://davidgs.com/posts/category/iot/minor-iot-calculations/</link>
+      <pubDate>Fri, 30 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/iot/minor-iot-calculations/</guid>
+      <description>Batteries will be a limiting factor in IoT deployments There’s a lot of hype about the Internet of Things (IoT) as I’ve said repeatedly — and as anyone who’s reading anything about technology these days already knows. There’s wearable tech, there’s healthcare IoT, there’s M2M IoT and a host of other areas of the IoT that are all projected to explode over the next 10 years. Billions and billions of devices are forecast.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>This Whole Thing Stinks!</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="This Whole Thing Stinks!" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/images/singing-poop-emoji-sm.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/images/singing-poop-emoji-sm.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>March 11, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>This Whole Thing Stinks!</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <h2 id="first-of-all-dont-ask">First of all, don&rsquo;t ask</h2>
+<p>I have no idea where this idea came from, it just happened. I keep saying &ldquo;I&rsquo;m not especially proud of this&rdquo; but in reality? I sort of am because it&rsquo;s funny as shit (pun intended). Some projects came across my twitter feed that included (I shit you not) a 3-D printable model of the 💩 emoji. I remember nothing else about that project, but you&rsquo;d better believe that I went straight for that STL file!</p>
+<p><img src="/posts/category/iot/images/singing-poop-emoji.jpg" alt="Singing poop emoji" title="singing-poop-emoji.jpg"></p>
+<p>It then sat festering for a few weeks (if you&rsquo;re not comfortable with lots of shitty jokes, bail out now. Fair warning.). I knew I <em>would</em> do something with it, I just didn&rsquo;t know <em>what</em> I&rsquo;d do. And then it hit me. I had a bunch of gas sensors lying around (if this surprises you, you really don&rsquo;t know me at all). And then it hit me! A bathroom stink sensor and alert system!! But my shit doesn&rsquo;t stink (shut up!) so where to deploy it? Eureka moment number 2! Our best friends' house, where all events are always held, has what we all call &ldquo;The Hardest Working Bathroom in Holly Springs&rdquo;. There are regularly 20 people over there for dinner, or some other event, and that little powder room takes the brunt of it all.</p>
+<h2 id="enter-the-stink-detector">Enter the Stink Detector</h2>
+<p>First thing was to 3-D print the little shit. To make sure I could fit the proper LEDs in it to make it light up the way I want it to. And no, you cannot make anything light up brown. If you&rsquo;re <em>really</em> interested in why you can&rsquo;t make brown light, you can go watch <a href="https://youtu.be/wh4aWZRtTwU">this video</a>, but the dude is way weirder than I am. Again, fair warning. So anyway, I printed it, and lo and behold, the LED controller I wanted to use fit (almost) perfectly! I had to clip a couple of corners off the PCB, but no harm was done, and I got a light-up poop emoji!</p>
+<p><img src="/posts/category/iot/images/IMG_0087.jpeg" alt="A Poop Emoji lit up orange"></p>
+<p>I&rsquo;ve also scaled it to 150% and I&rsquo;m considering printing it that way just because, well, you know, bigger shit is better shit! So, how did I light this shit up? Actually, very simply. I buy these Wemos D1 Mini boards in bulk (like 20 at a time, since they&rsquo;re only $2.00 each &ndash; more expensive if you buy them from Amazon, but if you buy them from Ali Express in China, they can be as cheap as $1.50 each) and I buy matching tri-color LED shields to go with them. My friends <a href="https://twitter.com/andysc">Andy Stanford-Clark</a> got me started on these things with his &lsquo;Glow Orbs&quot; If you want to read more on the specifics of Glow Orbs, <a href="https://twitter.com/DrLucyRogers">Dr. Lucy Rogers</a> wrote a whole thing about them <a href="https://www.ibm.com/blogs/internet-of-things/creating-home-glow-orb/">here</a>. Turns out she built a Fart-O-Meter and used a GlowOrb as well. I had no idea until Andy told me.</p>
+<p>For a Getting Started tutorial on the Wemos D1, see <a href="https://www.hackster.io/innovativetom/wemos-d1-mini-esp8266-getting-started-guide-with-arduino-727098">this article</a>. I know a lot of folks write up full, detailed tutorials, etc. for this stuff but, frankly, I&rsquo;m too lazy so I mostly just tell you what I&rsquo;ve done. I&rsquo;ll give the gory details where it matters.</p>
+<p>So anyway, since I do this shit all the time, I have my poop-light listen to an MQTT broker for messages about what color to display. I&rsquo;m still working out the detailed color levels as I calibrate things. I&rsquo;ll cover the specifics of how messages get sent and received in a bit.</p>
+<p>The stink detector itself is also being run on a Wemos D1 Mini with an MQ-4 Methane sensor that also supposedly measures H2 and an SGP-30 Air Quality sensor that measures Volatile Organic Chemicals (VOCs) and a really shitty version of CO2 which should never be trusted. I&rsquo;ve done a lot of work with CO2 sensors, and these eCO2 sensors aren&rsquo;t worth a shit. Seriously, never trust them. I&rsquo;m awaiting delivery on some more, better gas sensors like an MQ-136 Sulphur Dioxide sensor and others. I&rsquo;ll likely deploy them all and then invent some complicated but entirely arbitrary algorithm for deciding what is &lsquo;smelly&rsquo;. Stay tuned for that.</p>
+<h2 id="building-the-stink-sensor">Building the Stink Sensor</h2>
+<p>As I said, I&rsquo;m currently using a Wemos D1 Mini with an <a href="https://www.sparkfun.com/products/9404">MQ-4 Methane Sensor</a> and an <a href="https://www.adafruit.com/product/3709">SGP-30</a> air quality sensor. You can buy them yourself if you plan to build this thing. I&rsquo;ll update this with other sensors as I add them, maybe. Here&rsquo;s how to wire everything up:</p>
+<p><img src="/posts/category/iot/images/Stinker.png" alt="Circuit Schematic of the Wemos D1 and Gas sensor"></p>
+<p>It&rsquo;s important to note that the MQ-4 requires 5v whereas the SGP-30 only needs 3.3v. The MQ-4 is a straight analog sensor, so wiring it to one of the Analog inputs works fine. The SGP-30 is an I2C sensor, so it&rsquo;s wired SDA&lt;&ndash;&gt;D1 and SCL&lt;&ndash;&gt;D2 which are the default I2C pins on the Wemos (which I have to look up every single time). When you apply 5v via the USB the MQ-4 gets straight 5v and the SGP-30 gets 3.3v via the onboard voltage regulator. Now, how do you actually get data off of these sensors? Well, that&rsquo;s next, of course!</p>
+<h2 id="reading-stink">Reading Stink</h2>
+<p>The SGP-30 has a library for it provided by Adafruit (of course) so you&rsquo;ll need to add that library to your Arduino IDE and then include it in your project.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_SGP30.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;Wire.h&gt;</span><span style="color:#75715e">
+</span></code></pre></div><p>You will then create and SGP30 object and initialize it in your setup routine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">Adafruit_SGP30 sgp;
+</code></pre></div><p>Creates the object and then:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span> sgp.begin()){
+  Serial.println(<span style="color:#e6db74">&#34;Sensor not found :(&#34;</span>);
+    <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>initializes the sensor. If you haven&rsquo;t wired the sensor correctly, the whole thing will hang, so make sure you&rsquo;ve wired it up correctly!</p>
+<p>Reading the VOC is pretty simple after that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span> sgp.IAQmeasure()) {
+  Serial.println(<span style="color:#e6db74">&#34;Measurement failed&#34;</span>)
+  <span style="color:#66d9ef">return</span>;
+}
+Serial.print(<span style="color:#e6db74">&#34;TVOC &#34;</span>);
+Serial.print(sgp.TVOC);
+Serial.print(<span style="color:#e6db74">&#34; 	&#34;</span>);
+Serial.print(<span style="color:#e6db74">&#34;Raw H2 &#34;</span>);
+Serial.print(sgp.rawH2);
+Serial.print(<span style="color:#e6db74">&#34; 	&#34;</span>);
+Serial.print(<span style="color:#e6db74">&#34;Raw Ethanol &#34;</span>);
+Serial.print(sgp.rawEthanol);
+Serial.println(<span style="color:#e6db74">&#34;&#34;</span>)
+</code></pre></div><p>The sgp object is returned with all the readings in it, so it&rsquo;s pretty easy. The MQ-4 sensor is a little more tricky. It&rsquo;s an analog sensor, which means that it really just returns a raw voltage reading, which scales (somewhat) with the gas concentration. Lucky for me, someone provided a nice function to turn the raw voltage into a ppm (Parts Per Million) reading for the methane, so that&rsquo;s required as well:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">NG_ppm</span>(<span style="color:#66d9ef">double</span> rawValue)
+<span style="color:#66d9ef">double</span> ppm <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.938</span><span style="color:#f92672">*</span>exp(<span style="color:#ae81ff">1.7742</span><span style="color:#f92672">*</span>(rawValue<span style="color:#f92672">*</span><span style="color:#ae81ff">3.3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4095</span>));
+<span style="color:#66d9ef">return</span> ppm;
+</code></pre></div><p>Yeah, maths. I have no idea how it works, but it seems to, so I&rsquo;m going with it because I&rsquo;m shitty at math and have to trust someone smarter than me (which is most people, frankly). So now I can read the raw voltage on the analog pin, and then convert that to a reading of ppm, which is what we really want.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> sensorValue <span style="color:#f92672">=</span> analogRead(A0); <span style="color:#75715e">// read analog input pin 0]{style=&#34;color: #8e8e8e;&#34;}
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> ppm <span style="color:#f92672">=</span> NG_ppm(sensorValue);
+</code></pre></div><p>Cool! So, now that we can read the gas levels how do we tie all this together?</p>
+<h2 id="dont-use-a-shitty-database">Don&rsquo;t Use A Shitty Database!</h2>
+<p>Of course I work for a database company, so we&rsquo;re going to use that one. Actually, even if I didn&rsquo;t work for this particular database company, I&rsquo;d still use it because, for IoT data like this, it&rsquo;s just really the best solution. We will send all our data to InfluxDB and then we can see how to alert the glowing poop to change colors. So, how do we send data to InfluxDB? It&rsquo;s super simple. We use the InfluxDB library for Arduino, of course!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;InfluxDb.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define INFLUXDB_HOST &#34;yourhost.com&#34;
+</span><span style="color:#75715e">#define INFLUX_TOKEN &#34;yourLongTokenStringForInfluxDB2&#34;
+</span><span style="color:#75715e">#define BATCH_SIZE] 10
+</span><span style="color:#75715e"></span>Influxdb <span style="color:#a6e22e">influx</span>(INFLUXDB_HOST);
+</code></pre></div><p>A couple of things to note here. I&rsquo;m using InfluxDB 2.0, which is why I need the token. I have defined a BATCH_SIZE because writing data is much more efficient if we do it in batches rather than individually. Why? Well, I&rsquo;m glad you asked! Each write to the database happens over the HTTP protocol. So when you want to do that, you have to set up the connection, write the data, and then tear down the connection. Doing this every second or so is expensive, from a power and processor perspective. So it&rsquo;s better to save up a bunch of datapoints, then do the setup-send-teardown cycle once for all of it.</p>
+<p>So now we have an Influxdb object initialized with the correct server address. In the setup() function we have to complete the configuration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">influx.setBucket(<span style="color:#e6db74">&#34;myBucket&#34;</span>]);
+influx.setVersion(<span style="color:#ae81ff">2</span>);
+influx.setOrg(<span style="color:#e6db74">&#34;MyOrg&#34;</span>);
+influx.setPort(<span style="color:#ae81ff">9999</span>);
+influx.setToken(INFLUX_TOKEN);
+</code></pre></div><p>That&rsquo;s literally it. I&rsquo;m all set up to start writing data to InfluxDB, so let&rsquo;s see how I do that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">if</span>(batchCount <span style="color:#f92672">&gt;=</span> BATCH_SIZE) {
+  influx.write();
+  Serial.println(<span style="color:#e6db74">&#34;Wrote to InfluxDB&#34;</span>);
+  batchCount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+}
+InfluxData <span style="color:#a6e22e">row</span>(<span style="color:#e6db74">&#34;bathroom&#34;</span>);
+row.addTag(<span style="color:#e6db74">&#34;location &#34;</span>, <span style="color:#e6db74">&#34;hsbath&#34;</span>);
+row.addTag(<span style="color:#e6db74">&#34;sensor1&#34;</span>, <span style="color:#e6db74">&#34;sgp30&#34;</span>);
+row.addTag(<span style="color:#e6db74">&#34;sensor2&#34;</span>, <span style="color:#e6db74">&#34;mq-4&#34;</span>);
+row.addValue(<span style="color:#e6db74">&#34;tvoc&#34;</span>, sgp.TVOC);
+row.addValue(<span style="color:#e6db74">&#34;raw_h2&#34;</span>, sgp.rawH2);
+row.addValue([<span style="color:#e6db74">&#34;ethanol&#34;</span>, sgp.rawEthanol);
+row.addValue(<span style="color:#e6db74">&#34;methane&#34;</span>, ppm);
+influx.prepare(row);
+batchCount <span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;
+delay(<span style="color:#ae81ff">500</span>);
+</code></pre></div><p>In the first part, I check to see if I&rsquo;m up to my batch limit and if I am, I write the whole mess out to the database, and reset my count. After that, I create a new row for the database and add the tags and values to it. Then I &lsquo;prepare&rsquo; the row which really just adds it to the queue to be written with the next batch. Increase the batch count, and sit quietly for 500ms (½ a second). Then we do the whole thing again.</p>
+<p>Let&rsquo;s go to the database and see if I have it all working:</p>
+<p><img src="/posts/category/iot/images/Screen-Shot-2020-03-11-at-2.55.28-PM.png" alt="Screen Shot of an Influx Chronograf Dashboard"></p>
+<p>I&rsquo;d say that&rsquo;s a yes! Now that it&rsquo;s all there, it&rsquo;s time to send updates to the glowing poop!</p>
+<p>For that, we&rsquo;re going to create a Task in InfluxDB 2.0. And I&rsquo;m going to call it &lsquo;poop&rsquo; because even I don&rsquo;t want a task called &lsquo;shit&rsquo; in my UI.</p>
+<p><img src="/posts/category/iot/images/Screen-Shot-2020-03-11-at-2.57.12-PM.png" alt="Chronograf Dashboard Element"></p>
+<p>And here&rsquo;s the task I created:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;experimental/mqtt&#34;</span>
+
+<span style="color:#a6e22e">option</span> <span style="color:#a6e22e">task</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;poop&#34;</span>, <span style="color:#a6e22e">every</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span><span style="color:#a6e22e">s</span>}
+
+<span style="color:#a6e22e">from</span>( <span style="color:#a6e22e">bucket</span><span style="color:#f92672">:</span>  <span style="color:#e6db74">&#34;telegraf&#34;</span> )
+  <span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">range</span>(<span style="color:#a6e22e">start</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">task</span>.<span style="color:#a6e22e">every</span>)
+  <span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">r</span>()=&gt; (<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">_measurement</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;bathroom&#34;</span>)))
+  <span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">fn</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">r</span>()=&gt;(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">_field</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;tvoc&#34;</span>)))
+  <span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">last</span>()
+  <span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">mqttto</span>(<span style="color:#a6e22e">broker</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;tcp://yourmqttbroker.com:8883&#34;</span>, <span style="color:#a6e22e">topic</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;poop&#34;</span>, <span style="color:#a6e22e">clientid</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;poop-flux&#34;</span>, <span style="color:#a6e22e">valueColumns</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;_value&#34;</span>])
+</code></pre></div><p>Since there&rsquo;s a lot going on there, I&rsquo;ll go through it all. First off, the MQTT package I wrote is still in the &ldquo;experimental&rdquo; package, so you have to import that in order to use it. If you look above in the image of the data explorer you can see that I&rsquo;m storing everything in my &ldquo;telegraf&rdquo; bucket, and the &ldquo;bathroom&rdquo; measurement. Right now, I&rsquo;m only keying off of the &ldquo;tvoc&rdquo; reading. Once I change that, I&rsquo;ll update this task with the formula that I use. I&rsquo;m just grabbing the last reading over the past 30 seconds. I then fill out the details for the MQTT broker I am using, and the topic to submit to, and off it goes! That&rsquo;s it for the task!</p>
+<h2 id="lighting-shit-up">Lighting Shit Up!</h2>
+<p>So as you recall, we put a WEMOS D1 mini with a tri-color LED on it into the printed poop. Now it&rsquo;s time to light that shit up! Since we&rsquo;re writing values out to an MQTT broker, all we really need to do is connect that WEMOS to the MQTT broker, which, thankfully, is really straightforward.</p>
+<p>You need a bunch of WiFi stuff (you also need this in the sensor code, by the way):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;DNSServer.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WebServer.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFiManager.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;PubSubClient.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_NeoPixel.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266mDNS.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFiUdp.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#define LED_PIN D2  </span><span style="color:#75715e">//D2
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define LED_COUNT 1
+</span><span style="color:#75715e"></span><span style="color:#75715e">// update this with the Broker address ]{style=&#34;color: #8e8e8e;&#34;}
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define BROKER &#34;mybroker.com&#34;
+</span><span style="color:#75715e"></span><span style="color:#75715e">// update this with the Client ID in the format d:{org_id}:{device_type}:{device_id}]{style=&#34;color: #8e8e8e;&#34;}
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define CLIENTID &#34;poop-orb&#34;
+</span><span style="color:#75715e">#define COMMAND_TOPIC &#34;poop&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> status <span style="color:#f92672">=</span> WL_IDLE_STATUS; <span style="color:#75715e">// the Wifi radio&#39;s status
+</span><span style="color:#75715e"></span>WiFiClient espClient;
+PubSubClient <span style="color:#a6e22e">client</span>(espClient);
+</code></pre></div><p>Some of these are things that also correspond to things in your InfluxDB Task, like the COMMAND_TOPIC, and the BROKER. so make sure you get those correct between the two. That&rsquo;s all the stuff you have to have defined (I&rsquo;m not going through how to get the WiFi setup and configured as there are hundreds of tutorials on doing that for Arduino and ESP8266 devices.).</p>
+<p>In your setup() function you will need to configure your MQTT Client (PubSubClient) object and subscribe to your topic as well as set up your LED. I use the Adafruit NeoPixel library because it&rsquo;s super easy to use.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">client.setServer(BROKER, <span style="color:#ae81ff">8883</span>);
+client.setCallback(callback);
+client.subscribe(COMMAND_TOPIC);
+
+Adafruit_NeoPixel] pixel <span style="color:#f92672">=</span> Adafruit_NeoPixel(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// one pixels, on pin 4
+</span><span style="color:#75715e">//pin 4 is &#34;D2&#34; on the WeMoS D1 mini]{style=&#34;color: #8e8e8e;&#34;}
+</span></code></pre></div><p>Your main loop is pretty short for this, as the PubSubClient handles a lot of the timing for you:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>client.connected()) {
+    reconnect();
+  }
+  <span style="color:#75715e">// service the MQTT client]{style=&#34;color: #8e8e8e;&#34;}
+</span><span style="color:#75715e"></span>  client.loop();
+}
+</code></pre></div><p>You will, of course, need the callback routine, and this is where the magic happens, so let&rsquo;s look at that now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">callback</span>(<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> topic, byte<span style="color:#f92672">*</span> payload, <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> length) {
+  <span style="color:#66d9ef">char</span> content[<span style="color:#ae81ff">10</span>];
+  String s <span style="color:#f92672">=</span> String((<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)payload);
+  s.trim();
+  Serial.print(<span style="color:#e6db74">&#34;Message arrived on &#34;</span>);
+  Serial.print(COMMAND_TOPIC);
+  Serial.print(<span style="color:#e6db74">&#34;: &#34;</span>);
+
+  <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> buff[<span style="color:#ae81ff">256</span>] ;
+  s.getBytes(buff, <span style="color:#ae81ff">256</span>);
+  buff[<span style="color:#ae81ff">255</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\0&#39;</span>;
+  s <span style="color:#f92672">=</span> s.substring(s.indexOf(<span style="color:#e6db74">&#34;=&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, s.lastIndexOf(<span style="color:#e6db74">&#34; &#34;</span>));
+  s.trim();
+  <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> s.toInt();
+  String col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>;
+  <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100.0</span>) {
+    col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ff0000&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">90.0</span>) {
+    col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ff4000&#34;</span>;]
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">80.0</span>]){
+    col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ffbf00&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span><span style="color:#ae81ff">70.0</span>) {
+    col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bfff00&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">60.0</span>) {
+    col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;40ff00&#34;</span>;
+  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50.0</span>) {
+    col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;00ff40&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">40.0</span>) {
+    col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;00ffbf&#34;</span>;
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(c <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10.0</span>) {
+    col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00bfff&#34;</span>;
+  } <span style="color:#66d9ef">else</span> {
+    col <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bf00ff&#34;</span>;
+  }
+
+  <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> number <span style="color:#f92672">=</span> strtoll(<span style="color:#f92672">&amp;</span>col <span style="color:#ae81ff">0</span>, NULL, <span style="color:#ae81ff">16</span>);
+  <span style="color:#66d9ef">int</span> r <span style="color:#f92672">=</span> number <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">16</span>;
+  <span style="color:#66d9ef">int</span> g <span style="color:#f92672">=</span> number <span style="color:#f92672">&gt;&gt;</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span>;
+  <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> number <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xFF</span>;
+  <span style="color:#66d9ef">uint32_t</span> pCol <span style="color:#f92672">=</span> pixel.Color(r, g, b);
+  colorWipe(pCol, <span style="color:#ae81ff">100</span>);
+}
+</code></pre></div><p>Yeah, it&rsquo;s nutty. Mostly because I use this same code in a bunch of different places. Sometimes I want the hex color, sometimes I want the RGB color, so I can go either way here. It looks shitty, but it works for me.  All this does is get the message from the MQTT broker, and pull out the numeric value (through experience, I know that the MQTT message comes in the following format:</p>
+<pre><code>bathroom _value=566 1583959496007304541
+</code></pre><p>So I know I can index into it to the <code>=</code> sign and the <code> </code> (space character) and come back with the numeric value. From there, it&rsquo;s just scaling the value to the color and turning on the LED! After that, the poop glows when you shit! And the color changes depending on how stinky it is. The VOC value isn&rsquo;t really a very good value (especially if you tend to use some sort of poop-spray to hide your mis-deed. Most of those are nothing but VOCs and that will spike the numbers, Which is why I&rsquo;m awaiting the new sensors so I can get lots of gas values and see which one is most indicative of stink. Or which ones, more accurately. After that I&rsquo;ll come up with some algorithm to properly scale the stink level based on the various gas levels. Then deploy to the Hardest Working Bathroom in Holly Springs.</p>
+<p>And yes, they are game to have the stink-o-meter deployed over there.</p>
+<h2 id="get-your-own-shit">Get your own shit</h2>
+<p>So, if you want to build one yourself &hellip; first you&rsquo;ll need to print your own shit. You can download the STL file <a href="https://davidgs.com/poop.stl">here</a>. I&rsquo;ll see if I can clean up all this code and put it in my <a href="https://github.com/davidgs">GitHub</a>. Feel free to <a href="https://twitter.com/intent/follow?screen_name=davidgsIoT">Follow Me</a> on Twitter and reach out with questions or comments!</p>
+<p>As a final word, please, for the love of all that&rsquo;s holy, wash your damned hands. 60% of men and 40% of women don&rsquo;t wash their hands after using the toilet and that is disgusting. And now it makes you a disease vector. So <strong>Wash. Your. Hands!</strong></p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/this-whole-thing-stinks.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/database/snack-tracking-with-the-new-influxdb-arduino-library/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Snack Tracking with the new InfluxDB Arduino Library</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/database/building-the-worlds-smallest-influxdb-server/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Building the World&#39;s Smallest InfluxDB Server</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#first-of-all-dont-ask">First of all, don&rsquo;t ask</a></li>
+    <li><a href="#enter-the-stink-detector">Enter the Stink Detector</a></li>
+    <li><a href="#building-the-stink-sensor">Building the Stink Sensor</a></li>
+    <li><a href="#reading-stink">Reading Stink</a></li>
+    <li><a href="#dont-use-a-shitty-database">Don&rsquo;t Use A Shitty Database!</a></li>
+    <li><a href="#lighting-shit-up">Lighting Shit Up!</a></li>
+    <li><a href="#get-your-own-shit">Get your own shit</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>

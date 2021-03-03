@@ -4,19 +4,18 @@ Date: 2020-10-12
 Author: davidgs
 Category: DevRel, Evangelism, Jobs
 Slug: what-in-the-job-hopping-hell
+hero: images/im-gonna-make-5yooa8-250x300.jpg
 ---
 
-You what?
----------
+## You what?
 
-I changed jobs. Again. Yes. I did. But there's a good reason for it. It wasn't that long ago that I [posted](https://davidgs.com/2020/its-time-series-all-the-way-down/) about leaving InfluxData and joining [QuestDB](http://questdb.io) as their Head of Developer Relations. In fact, it was only 6 months ago. And yet, here I am, once again, posting about a job change. This is, you may notice, not characteristic of me. I was at Sun for 15 years, then Riverbed for 2.5 years, then InfluxData for 2.5 years. So what's going on?
+I changed jobs. Again. Yes. I did. But there's a good reason for it. It wasn't that long ago that I [posted](/posts/work/its-time-series-all-the-way-down/) about leaving InfluxData and joining [QuestDB](http://questdb.io) as their Head of Developer Relations. In fact, it was only 6 months ago. And yet, here I am, once again, posting about a job change. This is, you may notice, not characteristic of me. I was at Sun for 15 years, then Riverbed for 2.5 years, then InfluxData for 2.5 years. So what's going on?
 
-What's going on?
-----------------
+## What's going on?
 
 You ever get an offer you just can't refuse? Well, I  did.
 
-[![child in a tuxedo captioned "I'm going to make him an offer he can't refuse"](https://davidgs.com/wp-content/uploads/2020/10/im-gonna-make-5yooa8-250x300.jpg){.aligncenter .wp-image-882 .size-medium width="250" height="300"}](https://davidgs.com/wp-content/uploads/2020/10/im-gonna-make-5yooa8.jpg)
+[![child in a tuxedo captioned "I'm going to make him an offer he can't refuse"](/posts/work/images/im-gonna-make-5yooa8-250x300.jpg)](/posts/work/images/im-gonna-make-5yooa8.jpg)
 
 If you work in [Developer Relations](http://devrelcollective.fun), then you probably know (or know of) [Mary Thengvall](https://twitter.com/mary_grace). She quite literally wrote [the book](https://www.amazon.com/dp/1484237471/ref=cm_sw_em_r_mt_dp_2eiHFbV0TNHX9) on Developer Relations. If you haven't read it, you should. She's also been a friend of mine for a few years (and sort of my hero in DevRel).
 
@@ -26,12 +25,11 @@ As soon as she told me that, I said "hire me!" Of course. again, duh. But she di
 
 Fast forward a year (ish). Mary was hiring. For senior roles. Anyone who works in Devrel knows that senior roles don't come around all that often, and senior roles working for Mary are a once-in-a-lifetime opportunity.
 
-[caption id="attachment_883" align="aligncenter" width="210"][![David Byrne Once In a Lifetime poses](https://davidgs.com/wp-content/uploads/2020/10/9d069efc9e47c091c0d18d041ed863f0-210x300.png){.wp-image-883 .size-medium width="210" height="300"}](https://davidgs.com/wp-content/uploads/2020/10/9d069efc9e47c091c0d18d041ed863f0.png) You'll either get this, or you won't.[/caption]
+[![David Byrne Once In a Lifetime poses](/posts/work/images//9d069efc9e47c091c0d18d041ed863f0-210x300.png)](/posts/work/images/9d069efc9e47c091c0d18d041ed863f0.png) You'll either get this, or you won't.
 
 I asked, she offered, and I had to take it!
 
-So what now?
-------------
+## So what now?
 
 Now I'm a Principal Developer Advocate at Camunda! But wait, that's not IoT! That's not Time Series Databases! WTF is going on here even?
 

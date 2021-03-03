@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT, mynewt, open source, rtos on David G. Simmons</title>
+    <link>https://davidgs.com/tags/iot-mynewt-open-source-rtos/</link>
+    <description>Recent content in IoT, mynewt, open source, rtos on David G. Simmons</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://davidgs.com/tags/iot-mynewt-open-source-rtos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Growth of an Open Source RTOS</title>
+      <link>https://davidgs.com/posts/category/general/growth-open-source-rtos/</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://davidgs.com/posts/category/general/growth-open-source-rtos/</guid>
+      <description>I saw a cool animation someone did on the git activity of an open source project, so I decided to do one of my own. I’ve been contributing to an open source RTOS for IoT called MyNewt (pronounced minute, as in really small) so I decided I’d see what a visualization of the project looked like over the past year. It’s mesmerizing.
+As you can see, the growth of the project over the past year is pretty nice, and watching it grow is really cool.</description>
+    </item>
+    
+  </channel>
+</rss>

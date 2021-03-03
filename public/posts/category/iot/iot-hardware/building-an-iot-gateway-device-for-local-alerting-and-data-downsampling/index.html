@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      {
+          {
+           partial "debugprint.css" | safeCSS
+        }
+      }
+    </style>
+    <title>Building An IoT Gateway Device for local Alerting and Data Downsampling</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon_hu0b3af3b2695bc2a8e88d59b9721b8a18_8831_42x0_resize_box_2.png" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Building An IoT Gateway Device for local Alerting and Data Downsampling" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png">David G. Simmons</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo_hu36e4c6c516043df4c5aad6d68b952eee_646582_42x0_resize_box_2.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo_hu527ca2c923a6347a00483834e2e3046d_608569_42x0_resize_box_2.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/introduction/">Introduction</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/mad-skillz/mad-skillz/">Mad Skillz</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/beans/beans/">Coffee Beans</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/hobbies/">Hobbies</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/general/">General</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/programming/">Programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/dogs/">Dogs</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/database/">Databases</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/category/iot/">IoT</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-hardware/">Hardware</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/iot/iot-software/">Software</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/work/">Work</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/category/devrel/">DevRel</a></li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      
+      
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#34;https://davidgs.com/posts/category/iot/iot-hardware/images/SafariScreenSnapz005-1.png&#34;
+
+
+
+
+
+
+
+
+        <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://davidgs.com/posts/category/iot/iot-hardware/images/SafariScreenSnapz005-1.png);'>
+      </div>
+      
+
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/dg3.png'/>
+          <h5 class="author-name">David G. Simmons</h5>
+          <p>December 18, 2017</p>
+        </div>
+
+        <div class="title">
+          <h1>Building An IoT Gateway Device for local Alerting and Data Downsampling</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+
+
+          <p>There are all sorts of ways to architect your IoT Deployment, and what’s right for one enterprise will not necessarily be right for another. Depending on the size and complexity of your IoT project , there can be, of course, a lot of components. One of the more universal architectures is to deploy sensor hubs or gateway devices to collect data from a number of sensor nodes and then forward that data on to an upstream data collection system for the enterprise. These gateway or hub devices typically allow a ZWave device to connect to the internet for data upload, or to bridge between Bluetooth devices to a WiFi or other network connection. </p>
+<p>In addition, most of these gateway or hub devices tend to be ‘dumb’ gateways. They don’t do anything other than forward data on to an upstream collector. But what if the IoT Gateway could be a smart device? What if you could do local analytics and data processing on the hub device <strong>before</strong> sending the data on? Wouldn’t that be useful! </p>
+<h2 id="building-a-gateway">Building a Gateway</h2>
+<p>I decided to build (another) IoT Smart Gateway device this morning. I’ve (sort of) <a href="/posts/category/iot/iot-hardware/running-influxdb-on-an-artik-520/">built one before</a> in the form of an ARTIK-520 running InfluxDB. But an ARTIK-520 isn’t the cheapest thing out there, and when you’re building IoT devices, sometimes cheaper is better. Not always, but when you’re building lots and lots of gateways, you’d rather not break the bank on them. I dug out my <a href="https://www.pine64.org">Pine-64</a> box that I bought a few years ago and got to work. Why Pine-64 and not Raspberry Pi? Well, the Pine-64 is about 1/2 the cost. Yes, 1/2 the cost. It’s $15 instead of $35, so there’s that. It has the exact same ARM A53 quad-core 1.2 GHz processor — mine has 2GB of memory, vs. the 1GB on a RPi — and it has a more powerful GPU, if you’re into that sort of thing. It also came with built-in WiFi, so no dongle, and I got the ZWave optional board so I can talk to sub-GHz IoT devices. </p>
+<p>One of the nice things about running these kinds of devices as IoT Gateways is that you are only limited in your storage by the size of the microSD card you use. I’m only using a 16GB card, but the Pine-64 can take up to a 256GB card.</p>
+<p>What does it take to get the TICK stack up and running on a Pine-64? Not surprisingly, the Time To Awesome™ is really short! Once you have your Pine-64 box up and running — I suggest using the Xenial image as it’s the ‘official’ Pine-64 image and it’s Ubuntu, so it’s super easy with InfluxDB. Don’t forget to run</p>
+<pre><code>apt-get upgrade
+</code></pre><p>As soon as you have it up and running to make sure your have everything up to date. </p>
+<p>Next, add the Influx repositories to apt-get:</p>
+<pre><code>curl -sL https://repos.influxdata.com/influxdb.key | apt-key add -
+source /etc/lsb-release
+echo &quot;deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable&quot; | tee -a /etc/apt/sources.list
+</code></pre><p>You will likely have to run those with sudo, but I cheat and run ‘sudo bash’ to start with and then I’m all set. </p>
+<p>Next, you’ll need to add a package that’s missing — and required — in order to access the InfluxData repositories:</p>
+<pre><code>apt-get install apt-transport-https
+</code></pre><p>Then it’s just a matter of </p>
+<pre><code>apt-get install influxdb chronograf telegraf kapacitor
+</code></pre><p>and you are ready to go! </p>
+<h2 id="load-testing-the-device">Load Testing the Device</h2>
+<p>I decided it might be a good idea to put a load on this little device just to see what it was capable of handling, so I downloaded ‘influx-stress’ from <a href="https://github.com/influxdata/influx-stress">GitHub</a> and ran it against this device. </p>
+<pre><code>Using batch size of 10000 line(s)
+Spreading writes across 100000 series
+Throttling output to ~200000 points/sec
+Using 20 concurrent writer(s)
+Running until ~18446744073709551615 points sent or until ~2562047h47m16.854775807s has elapsed
+</code></pre><p>Wow … that’s 200,000 points per second! That should put some serious stress on my little Pine-64! And it turns out it sort of did:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/SafariScreenSnapz005-1.png" alt="SafariScreenSnapz005"></p>
+<p>As you can see, it fairly quickly topped out the 2GB of memory, and pegged the CPU at 100%. But as a gateway device, it’s unlikely, in real life, to see such a load. I think, in terms of real-life usage as a gateway, I’d be well within my range if I were only collecting from a few dozen to maybe a hundred or so sensors. </p>
+<h2 id="local-analytics">Local Analytics</h2>
+<p>As you can see from the Dashboard above, I can easily do some local analytics on the Pine-64. It has an onboard HDMI interface, and a full GPU, so allowing local access to the dashboard for monitoring is dead simple. But as I said earlier, it would be much more useful if the device could do more than that. It’s unlikely that, in the real world, you’re going to collect all your data on a gateway device and do all your analytics, etc. there. That’s not what gateways/hubs are for. <em>Some</em> local analytics, alerting, etc. would be good — move some of the processing out towards the edge when you can — but you still want to forward data upstream. </p>
+<h2 id="downsampling-the-data">Downsampling the Data</h2>
+<p>It’s pretty easy to simply use a gateway device to forward <strong>all</strong> your data upstream, but if you’re dealing with network connectivity issues, and you are trying to save either money or bandwidth, or both, you are going to want to do some data downsampling before you forward your data. Thankfully this also is really easy to do! A gateway device that can do local analytics, handle some local alerting, and can also downsample the data before passing it upstream is hugely useful in IoT. It’s also fairly simple to do! </p>
+<p>First, let’s set up our gateway device to be able to forward data upstream to another instance of InfluxDB. There are several ways to do this, but since we’re going to be doing some data downsampling via Kapacitor,  we’ll do it via the kapacitor.conf file. The kapacitor.conf file already has a section with an [[influxdb]] entry for ‘localhost’ so we just need to add a new [[influxdb]] section for the upstream instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">[[<span style="color:#ae81ff">influxdb]]</span>
+<span style="color:#ae81ff">enabled = true</span>
+<span style="color:#ae81ff">name = &#34;mycluster&#34;</span>
+<span style="color:#ae81ff">default = false</span>
+<span style="color:#ae81ff">urls = [&#34;http://192.168.1.121:8086&#34;]</span>
+<span style="color:#ae81ff">username = &#34;&#34;</span>
+<span style="color:#ae81ff">password = &#34;&#34;</span>
+<span style="color:#ae81ff">ssl-ca = &#34;&#34;</span>
+<span style="color:#ae81ff">ssl-cert = &#34;&#34;</span>
+<span style="color:#ae81ff">ssl-key = &#34;&#34;</span>
+<span style="color:#ae81ff">insecure-skip-verify = false</span>
+<span style="color:#ae81ff">timeout = &#34;0s&#34;</span>
+<span style="color:#ae81ff">disable-subscriptions = false</span>
+<span style="color:#ae81ff">subscription-protocol = &#34;http&#34;</span>
+<span style="color:#ae81ff">subscription-mode = &#34;cluster&#34;</span>
+<span style="color:#ae81ff">kapacitor-hostname = &#34;&#34;</span>
+<span style="color:#ae81ff">http-port = 0</span>
+<span style="color:#ae81ff">udp-bind = &#34;&#34;</span>
+<span style="color:#ae81ff">udp-buffer = 1000</span>
+<span style="color:#ae81ff">udp-read-buffer = 0</span>
+<span style="color:#ae81ff">startup-timeout = &#34;5m0s&#34;</span>
+<span style="color:#ae81ff">subscriptions-sync-interval = &#34;1m0s&#34;</span>
+[<span style="color:#ae81ff">influxdb.excluded-subscriptions]</span>
+<span style="color:#ae81ff">_kapacitor = [&#34;autogen&#34;]</span>
+</code></pre></div><p>That solves part of the problem. Now we need to actually downsample the data, and send it on. Since I’m using Chronograf v1.3.10, I have a built-in TICKscript editor, so I’ll go to the ‘Alerting’ Tab in Chronograf, and create a new TICK Script, and select the telegraf.autoget database as my source:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Create.gif" alt="Create"></p>
+<p>I’m not actually collecting Sensor data on this device yet, so I’ll use the CPU usage as my data, and I’ll downsample it in my TICKScript. I’ve written a very basic TICKScript to downsample my CPU data and forward it upstream:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">stream</span>
+    <span style="color:#f92672">|</span><span style="color:#a6e22e">from</span>()
+        .<span style="color:#a6e22e">database</span>(<span style="color:#e6db74">&#39;telegraf&#39;</span>)
+        .<span style="color:#a6e22e">measurement</span>(<span style="color:#e6db74">&#39;cpu&#39;</span>)
+        .<span style="color:#a6e22e">groupBy</span>(<span style="color:#f92672">*</span>)
+    <span style="color:#f92672">|</span><span style="color:#a6e22e">where</span>(<span style="color:#a6e22e">lambda</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">isPresent</span>(<span style="color:#e6db74">&#34;usage_system&#34;</span>))
+    <span style="color:#f92672">|</span>window()
+        .<span style="color:#a6e22e">period</span>(<span style="color:#ae81ff">1</span><span style="color:#a6e22e">m</span>)
+        .<span style="color:#a6e22e">every</span>(<span style="color:#ae81ff">1</span><span style="color:#a6e22e">m</span>)
+        .<span style="color:#a6e22e">align</span>()
+    <span style="color:#f92672">|</span><span style="color:#a6e22e">mean</span>(<span style="color:#e6db74">&#39;usage_system&#39;</span>)
+        .<span style="color:#a6e22e">as</span>(<span style="color:#e6db74">&#39;mean_usage_system&#39;</span>)
+    <span style="color:#f92672">|</span><span style="color:#a6e22e">influxDBOut</span>()
+        .<span style="color:#a6e22e">cluster</span>(<span style="color:#e6db74">&#39;mycluster&#39;</span>)
+        .<span style="color:#a6e22e">create</span>()
+        .<span style="color:#a6e22e">database</span>(<span style="color:#e6db74">&#39;downsample&#39;</span>)
+        .<span style="color:#a6e22e">retentionPolicy</span>(<span style="color:#e6db74">&#39;autogen&#39;</span>)
+        .<span style="color:#a6e22e">measurement</span>(<span style="color:#e6db74">&#39;mean_cpu_idle&#39;</span>)
+        .<span style="color:#a6e22e">precision</span>(<span style="color:#e6db74">&#39;s&#39;</span>)
+</code></pre></div><p>That script simply takes the <code>usage_system</code> field of the CPU measurement every minute, calculates the mean, and then writes that value upstream to my upstream InfluxDB instance. On the gateway device, the CPU data looks like this:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Raw.gif" alt="Raw"></p>
+<p>The downsampled data on my upstream instance looks like this:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Downsample.gif" alt="Downsample"></p>
+<p>It’s the same data, just much less granular. Finally, I’ll go set the data retention policy on my gateway device to be just 1 day, so I don’t fill the device but I can still maintain a bit of history locally:</p>
+<p><img src="/posts/category/iot/iot-hardware/images/Day.gif" alt="Day"></p>
+<p>I now have an IoT Gateway device that can collect local sensor data, present some analytics to a local user, do some local alerting (once I set up some kapacitor alerts), and then downsample the local data and send it upstream to my enterprise InfluxDB instance for further analysis and processing. I can have the highly-granular millisecond data available on the gateway device, and the less-granular 1-minute data on my upstream device allowing me to still have insight into the local sensors without having to pay the bandwidth costs for send all the data upstream.</p>
+<p>I can also use this method to further chain the data storage by storing the 1-minute data on a regional InfluxDB instance, and forwarding further-downsampled data on to an InfluxDB instance where I can aggregate my sensor data from across my entire enterprise. </p>
+<p>I <strong>could</strong> just send all data up the chain to my ultimate enterprise data aggregator, but if I’m aggregating tens of thousands of sensors and their data, the storage and bandwidth costs may begin to outweigh the usefulness of the highly-granular nature of the data. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I repeat this so often I might have to have it tattooed on my forehead, but I’ll say it again: IoT Data is really only useful if it is timely, accurate, and *<strong>actionable</strong>. *The older your data is, the less actionable it becomes. The less actionable it is, the less detail you need. Downsampling your data, and setting increasingly longer data retention policies as you go, can ensure that your highly immediate data has the specificity to be highly actionable and highly accurate, while preserving the long-term trends in your data for longer-term trend analysis. </p>
+
+        
+        
+
+        
+        
+        
+        
+
+
+        
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/davidgs/website/edit//content/posts/category/iot/iot-hardware/building-an-iot-gateway-device-for-local-alerting-and-data-downsampling.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/category/iot/iot-software/heres-why-im-giving-up-on-mynewt-for-now/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Here&#39;s Why I&#39;m giving up on MyNewt (for now)</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/category/database/timetoawesomeinfluxdb/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Time to Awesome with InfluxDB</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#building-a-gateway">Building a Gateway</a></li>
+    <li><a href="#load-testing-the-device">Load Testing the Device</a></li>
+    <li><a href="#local-analytics">Local Analytics</a></li>
+    <li><a href="#downsampling-the-data">Downsampling the Data</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experience</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>davidgs@davidgs.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;1 (919) 534-5099</span></li>
+          
+        </ul>
+      </div>
+      
+      
+      <div class="col-md-4 col-sm-12">
+        
+        <p>Stay up to date with email notification</p>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We&#39;ll never share your email with anyone else.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+    
+    
+<script type="text/javascript">
+  var sc_project = 10096606;
+  var sc_invisible = 1;
+  var sc_security = "2eda6207";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+</noscript>
+
+  </body>
+</html>
