@@ -25,15 +25,15 @@ Read on if you’re interested!
 
 I’ve been working on a little IoT project (duh) that is using a Raspberry Pi. It also uses a Bosch BME280 breakout board from Adafruit. Which would be super easy to deal with if I was running it on an Arduino. But I’m not. And yes, I’m aware that there are ways to just run Arduino sketches on Raspberry Pi but I really am not such a fan of Arduino sketches, so I decided to do it another way.
 
-The sensor is I^2^C, of course, so there was that. It’s easy to make the I^2^C buss accessible on Raspberry Pi (just run raspi-config and Bob’s your Uncle), but dealing with I^2^C devices is a little harder. I tried a couple of C-based I^2^C libraries but most of them gave … *unexpected* results. The one I found that was the closest was by a GitHub user called “[BitBank2](https://github.com/bitbank2)”  (https://github.com/bitbank2/bme280) so I decided to use his. I was able to compile it and run the example program with at least reasonable results. But then I still had to call it from some user-space program in order to get the results. I should have smelled a rathole coming, but of course I didn’t.
+The sensor is I<sup>2</sup>C, of course, so there was that. It’s easy to make the I<sup>2</sup>C buss accessible on Raspberry Pi (just run raspi-config and Bob’s your Uncle), but dealing with I<sup>2</sup>C devices is a little harder. I tried a couple of C-based I<sup>2</sup>C libraries but most of them gave … *unexpected* results. The one I found that was the closest was by a GitHub user called “[BitBank2](https://github.com/bitbank2)”  (https://github.com/bitbank2/bme280) so I decided to use his. I was able to compile it and run the example program with at least reasonable results. But then I still had to call it from some user-space program in order to get the results. I should have smelled a rathole coming, but of course I didn’t.
 
 I’ll just port it to Go! Sounded reasonable at the time.
 
 ## Porting to Go
 
-It was actually a **lot** easier than I thought it would be. First, there’s a great Go I^2^C library from [@rakyll](https://twitter.com/rakyll) that works great. I had used it to access a SenseAir K30 CO~2~ sensor, so I thought I’d start there.
+It was actually a **lot** easier than I thought it would be. First, there’s a great Go I<sup>2</sup>C library from [@rakyll](https://twitter.com/rakyll) that works great. I had used it to access a SenseAir K30 CO<sub>2</sub> sensor, so I thought I’d start there.
 
-Since the library I was starting from worked, I figured the easiest thing to do would be to just do a semi-straight translation. I’d copy in a few lines of the C code, and then make it Go. There were, of course, some things that just wouldn’t work well. For instance, the I^2^C library wants to deal in bytes and byte slices, so I couldn’t very well just use the ints that the C library used. Also, the C library used a slew of static global variables, and that was also not going to work well in go. So I made adjustments:
+Since the library I was starting from worked, I figured the easiest thing to do would be to just do a semi-straight translation. I’d copy in a few lines of the C code, and then make it Go. There were, of course, some things that just wouldn’t work well. For instance, the I<sup>2</sup>C library wants to deal in bytes and byte slices, so I couldn’t very well just use the ints that the C library used. Also, the C library used a slew of static global variables, and that was also not going to work well in go. So I made adjustments:
 
 ```c
 static int calT1,calT2,calT3;

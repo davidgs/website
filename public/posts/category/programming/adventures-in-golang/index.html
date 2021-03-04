@@ -165,6 +165,15 @@
   
   
     
+    <li><a class="" href="/posts/pranks/">Pranks</a></li>
+  
+
+  
+  
+  
+  
+  
+    
     <li><a class="" href="/posts/category/camunda/">Camunda</a></li>
   
 
@@ -348,11 +357,11 @@
 <p>Read on if you’re interested!</p>
 <h2 id="background">Background</h2>
 <p>I’ve been working on a little IoT project (duh) that is using a Raspberry Pi. It also uses a Bosch BME280 breakout board from Adafruit. Which would be super easy to deal with if I was running it on an Arduino. But I’m not. And yes, I’m aware that there are ways to just run Arduino sketches on Raspberry Pi but I really am not such a fan of Arduino sketches, so I decided to do it another way.</p>
-<p>The sensor is I^2^C, of course, so there was that. It’s easy to make the I^2^C buss accessible on Raspberry Pi (just run raspi-config and Bob’s your Uncle), but dealing with I^2^C devices is a little harder. I tried a couple of C-based I^2^C libraries but most of them gave … <em>unexpected</em> results. The one I found that was the closest was by a GitHub user called “<a href="https://github.com/bitbank2">BitBank2</a>”  (<a href="https://github.com/bitbank2/bme280">https://github.com/bitbank2/bme280</a>) so I decided to use his. I was able to compile it and run the example program with at least reasonable results. But then I still had to call it from some user-space program in order to get the results. I should have smelled a rathole coming, but of course I didn’t.</p>
+<p>The sensor is I<sup>2</sup>C, of course, so there was that. It’s easy to make the I<sup>2</sup>C buss accessible on Raspberry Pi (just run raspi-config and Bob’s your Uncle), but dealing with I<sup>2</sup>C devices is a little harder. I tried a couple of C-based I<sup>2</sup>C libraries but most of them gave … <em>unexpected</em> results. The one I found that was the closest was by a GitHub user called “<a href="https://github.com/bitbank2">BitBank2</a>”  (<a href="https://github.com/bitbank2/bme280">https://github.com/bitbank2/bme280</a>) so I decided to use his. I was able to compile it and run the example program with at least reasonable results. But then I still had to call it from some user-space program in order to get the results. I should have smelled a rathole coming, but of course I didn’t.</p>
 <p>I’ll just port it to Go! Sounded reasonable at the time.</p>
 <h2 id="porting-to-go">Porting to Go</h2>
-<p>It was actually a <strong>lot</strong> easier than I thought it would be. First, there’s a great Go I^2^C library from <a href="https://twitter.com/rakyll">@rakyll</a> that works great. I had used it to access a SenseAir K30 CO~2~ sensor, so I thought I’d start there.</p>
-<p>Since the library I was starting from worked, I figured the easiest thing to do would be to just do a semi-straight translation. I’d copy in a few lines of the C code, and then make it Go. There were, of course, some things that just wouldn’t work well. For instance, the I^2^C library wants to deal in bytes and byte slices, so I couldn’t very well just use the ints that the C library used. Also, the C library used a slew of static global variables, and that was also not going to work well in go. So I made adjustments:</p>
+<p>It was actually a <strong>lot</strong> easier than I thought it would be. First, there’s a great Go I<sup>2</sup>C library from <a href="https://twitter.com/rakyll">@rakyll</a> that works great. I had used it to access a SenseAir K30 CO<sub>2</sub> sensor, so I thought I’d start there.</p>
+<p>Since the library I was starting from worked, I figured the easiest thing to do would be to just do a semi-straight translation. I’d copy in a few lines of the C code, and then make it Go. There were, of course, some things that just wouldn’t work well. For instance, the I<sup>2</sup>C library wants to deal in bytes and byte slices, so I couldn’t very well just use the ints that the C library used. Also, the C library used a slew of static global variables, and that was also not going to work well in go. So I made adjustments:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> calT1,calT2,calT3;
 <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> calP1, calP2, calP3, calP4, calP5, calP6, calP7, calP8, calP9;
 <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> calH1, calH2, calH3, calH4, calH5, calH6;
@@ -450,6 +459,12 @@ calT2 <span style="color:#f92672">=</span> ucCal[<span style="color:#ae81ff">2</
       <hr />
         <div class="row next-prev-navigator">
 
+
+  
+
+  
+
+  
 
   
 
@@ -862,14 +877,19 @@ calT2 <span style="color:#f92672">=</span> ucCal[<span style="color:#ae81ff">2</
     
     
 <script type="text/javascript">
-  var sc_project = 10096606;
-  var sc_invisible = 1;
-  var sc_security = "2eda6207";
+  var sc_project = 4739013;
+  var sc_invisible = 0;
+  var sc_security = "3147012e";
+  var scJsHost = "https://";
+  document.write("<sc" + "ript type='text/javascript' src='" +
+    scJsHost +
+    "statcounter.com/counter/counter.js'></" + "script>");
 </script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
 <noscript>
-  <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-        class="statcounter" src="https://c.statcounter.com/10096606/0/2eda6207/1/" alt="Web Analytics"></a></div>
+  <div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="https://statcounter.com/" target="_blank"><img class="statcounter"
+        src="https://c.statcounter.com/4739013/0/3147012e/0/" alt="Web Analytics Made Easy -
+StatCounter"></a></div>
 </noscript>
 
   </body>
